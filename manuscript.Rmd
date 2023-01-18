@@ -68,7 +68,7 @@ set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
-Based on four basic principles of a more responsible research assessment in academic hiring and promotion processes (Schönbrodt et al., X), @gartner2022responsible suggest a specific implementation to broaden the range of what constitutes research contributions. Gaertner et al. provide evaluation schemes for published manuscripts, published datasets, and software contributions. Here, we specifically comment on the proposed evaluation scheme for research software contributions (Table 3). In the following, we comment on the dimensions metrics, lines of code, software engineering, impact, peer-review, usability. 
+Based on four basic principles of a more responsible research assessment in academic hiring and promotion processes [@schonbrodt2022responsible], @gartner2022responsible suggest a specific implementation to broaden the range of what constitutes research contributions. Gaertner et al. provide evaluation schemes for published manuscripts, published datasets, and software contributions. Here, we specifically comment on the proposed evaluation scheme for research software contributions (Table 3). In the following, we comment on the dimensions metrics, lines of code, software engineering, impact, peer-review, usability. 
 
 
 ## Metrics
