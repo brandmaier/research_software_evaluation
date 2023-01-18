@@ -1,0 +1,116 @@
+---
+title             : "A commentary to 'Responsible Research Assessment II: A specific proposal for hiring and promotion in psychology'"
+shorttitle        : "Responsible research assessment"
+
+author: 
+  - name          : "Andreas M. Brandmaier"
+    affiliation   : "1,2,3"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Postal address"
+    email         : "my@email.com"
+    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
+      - "Conceptualization"
+      - "Writing - Original Draft Preparation"
+      - "Writing - Review & Editing"
+      - "Supervision"
+  - name          : "Maximilian Ernst"
+    affiliation   : "2"
+    role:
+      - "Conceptualization"
+      - "Writing - Original Draft Preparation"
+      - "Writing - Review & Editing"
+  - name          : "Aaron Peikert"
+    affiliation   : "2"
+    role:
+      - "Conceptualization"
+      - "Writing - Original Draft Preparation"
+      - "Writing - Review & Editing"
+
+affiliation:
+  - id            : "1"
+    institution   : "MSB Medical School Berlin"
+  - id            : "2"
+    institution   : "Max Planck Institute for Human Development"
+  - id            : "3"
+    institution   : "Humboldt Universität zu Berlin"
+    
+
+
+abstract: |
+  TBD 
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : "r-references.bib"
+
+floatsintext      : no
+linenumbers       : yes
+draft             : no
+mask              : no
+
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+Based on four basic principles of a more responsible research assessment in academic hiring and promotion processes (Schönbrodt et al., X), Gaertner et al. suggest a specific implementation to broaden the range of what constitutes research contributions. Gaertner et al. provide evaluation schemes for published manuscripts, published datasets, and software contributions. Here, we specifically comment on the proposed evaluation scheme for research software contributions (Table 3). In the following, we comment on dimensions metrics, lines of code, software engineering, impact, peer-review, usability. 
+
+
+## Metrics
+
+Gaertner et al. suggest the number of citations (their indicator #9 in Table 3) to evaluate the impact of a software package. They acknowledge the problem that citations inconsistently point to software packages and/or accompanying software packages. For example, one of the authors maintains the pdc package for R. Google scholar counts X citations to the package and X citations to the accompanying paper, of which XX citations cite both, which permits a simple addition of the citation counts.
+
+Date of first fully functional public version is a central field in the proposal as it serves as a denominator in computing citations relative to software age. In our own experience, research software often evolves very differently to the standards that software engineering prescribes. In best-practice software development, the first step is software specification or requirements engineering. This is the process of understanding and defining what features and services are required from the product and how they are to be offered. This involves research on existing solutions, discussions with users, user interface testing with mockups or user observations while testing prototypes. A requirement specification documents the expected functionality, such that development time and cost can be estimated and requirements can be formally checked with the final product for consistency and completeness. From our own experience, hardly any of these steps apply to scientific software development. Scientific software is often developed as a side-project fuelled by enthusiasm instead of proper funding. Some pieces of software start as testbed implementation of a newly proposed methodology, others come to life as wrappers or graphical interfaces for other packages, some others were never meant to be shared but are so useful that they became a package on their own. 
+
+We strongly object to the metric Github stars. First of all, it is tied only to a single, commercial platform and allows no freedom to choose free alternatives such as local Gitlab instances or other platforms. More importantly, we question the validity of such metrics that like rating systems on commercial platforms are too easy to be gamed by creating fake accounts that provide high ratings.
+
+In our opinion, total citation metrics, number of users, downloads per month and similar may provide a coarse measure for the impact of a software package, even though it is important to note that these metrics are difficult to compare across different types of software package. However, we would like to point out that the request for citation metrics with respect to software packages seems inconsistent with the authors condemnation of citation metrics for publications.
+
+Complementing the quantitative aspect of impact, we suggest to introduce a qualitative response. Researchers should indicate at least one (and up to three) empirical research projects that directly benefitted from the software contributions they made. We believe this is a fair assessment of the real impact no matter whether someone contributed documentation/tutorial to run certain types of models, whether someone contributed a specific feature that enabled a given research project to run their analysis, or whether someone is the author of the entire package.
+
+## Software Engineering standards
+
+As mentioned before, software engineering standards are often not adhered to in the ad-hoc
+development of scientific software. Thus, at the minimum, we would like to encourage researchers if they provide unit tests. Unit tests are the backbone of software quality and testing. Developing unit tests may often cost more time than developing the actual code. At the same time, they are usually unrecognized because they are invisible to the end user and provide no functionality on its own.
+
+## Lines of code
+
+We strongly oppose the lines of code (LOC) metric that was proposed to measure effort. Lines of code is a common metric in software development useful to gauge the size of an entire code base or its change over time. There are several problems in using this indicator for effort. First of all, lines of code is an ambiguous metric. It can be calculated differently depending on whether comments do count or whether physical lines of code or logical lines of code are counted.  Second, lines of codes for code contributions highly depends on the programming language, mastery and personal programming style. In particular, large LOC of a researcher may simply mean that they write unefficient and repetitive code, one of the great sins of programming. A feature of good software is modularity because it enable reuse of functions both inside and outside the project. A great example is the CRAN library that enables packages to built upon other packages and reuse their functionality. However, if LOC were a metric that a researcher are compared with, it encourages researchers to copy&paste chunks of code from other packages instead of importing them in their project.  
+
+
+
+## Peer-Review
+
+Similar to peer-review for manuscripts, software code is amenable to peer-review. It is common
+practice in corporate software development, to have peers review code. For example, if a code base is changed, it is good practice to request a change with the developer team before actually changing the code base. The change is reviewed by experts and/or maintainers before it is integrated in the active branch of development. In developing these guidelines, we see the opportunity to foster such good practices and reward researchers that actively engage in reviewing computer code. Software peer-review is increasingly becoming recognized as a means to enable better research software. Peer-review can happen in the context of dedicated software journal (e.g, Journal of Statistical Software), as part of the standard review process (for guidelines, see https://www.carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html), or as part of submissions to software archives that guarantuee certain standards (e.g., rOpenSci). We suggest that active participation in the review of scientific software, independent of the involvement or maintance of specific software products, should be a dimension of positive evaluation.
+
+## Reproducibility
+
+->Aaron and Max
+
+
+## Summary
+
+In sum, we are thankful to Gaertner et al. for highlighting the importance of research software contributions as academically valuable products. Specifically, we value ... However, we are critical of ... for the reasons mentioned here. We propose to ...
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::
