@@ -7,7 +7,7 @@ author:
     affiliation   : "1,2,3"
     corresponding : yes    # Define only one corresponding author
     address       : "Postal address"
-    email         : "my@email.com"
+    email         : "andreas.brandmaier@medicalschool-berlin.de"
     role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
       - "Conceptualization"
       - "Writing - Original Draft Preparation"
@@ -96,11 +96,11 @@ Complementing the quantitative aspect of impact, we suggest to introduce a manda
 ## Software Engineering standards
 
 As mentioned before, software engineering standards are often not adhered to in the ad-hoc
-development of scientific software. Thus, at the minimum, we would like to encourage researchers if they provide unit tests. Unit tests are the backbone of software quality and testing. Developing unit tests may often cost more time than developing the actual code. At the same time, they are usually unrecognized because they are invisible to the end user and provide no functionality on its own.
+development of scientific software. Thus, at the minimum, we would like to encourage researchers if they provide unit tests. Unit tests are the backbone of software quality and testing. Developing unit tests may often cost more time than developing the actual code. At the same time, they are usually unrecognized because they are invisible to the end user and provide no functionality on its own. A specific set of guidelines implements FAIR for research software and may serve to quantify the FAIRness of research software [@barker2022introducing].
 
 ## Lines of code
 
-We discourage the lines of code (LOC) metric that was proposed to measure effort. Lines of code is a common metric in software development useful to gauge the size of an entire code base or its change over time. There are several problems in using this indicator for effort. First of all, lines of code is an ambiguous metric. It can be calculated differently depending on whether comments do count or whether physical lines of code or logical lines of code are counted.  Second, lines of codes for code contributions highly depends on the programming language, mastery and personal programming style. In particular, large LOC of a researcher may simply mean that they write inefficient and repetitive code, one of the great sins of programming. A feature of good software is modularity because it enable reuse of functions both inside and outside the project. A great example is the CRAN library that enables packages to built upon other packages and reuse their functionality. However, if LOC were a metric that a researcher are compared with, it encourages researchers to copy&paste chunks of code from other packages instead of importing them in their project.  
+To our knowledge, there is no consensus as how to measure productivity or quality of software contributions and no single metric seems to be a valid measure [e.g., @7332509]. Specifically, we discourage the lines of code (LOC) metric that was proposed to measure effort. Lines of code is a common metric in software development useful to gauge the size of an entire code base or its change over time. There are several problems in using this indicator for effort. First of all, lines of code is an ambiguous metric. It can be calculated differently depending on whether comments do count or whether physical lines of code or logical lines of code are counted.  Second, lines of codes for code contributions highly depends on the programming language, mastery and personal programming style. In particular, large LOC of a researcher may simply mean that they write inefficient and repetitive code, one of the great sins of programming. A feature of good software is modularity because it enable reuse of functions both inside and outside the project. A great example is the CRAN library that enables packages to built upon other packages and reuse their functionality. However, if LOC were a metric that a researcher are compared with, it encourages researchers to copy&paste chunks of code from other packages instead of importing them in their project.  
 
 
 
