@@ -87,6 +87,7 @@ We then discuss rigor in the context of research software, and propose specific 
 At last, we elaborate on the assessment of impact in the context of research software.
 
 # Proposed Criteria
+
 ## ID 9: Citations
 @gartner2022responsible suggest the number of citations (their indicator #9 in Table 3) to evaluate the impact of a software package.
 However, citations suffer from serious shortcoming when used to evaluate the impact of research software.
@@ -104,8 +105,6 @@ We therefore argue that merrit statements are much more useful to assess impact 
 We strongly object to the metric Github stars.
 First of all, it is tied only to a single, commercial platform and allows no freedom to choose free alternatives such as local Gitlab instances or other platforms.
 More importantly, we question the validity of such metrics that like rating systems on commercial platforms are too easy to be gamed by creating fake accounts that provide high ratings.
-
-
 
 ## ID 14: Lines of Code
 We discourage the lines of code (LOC) metric that was proposed to measure effort.
@@ -125,10 +124,16 @@ It is often developed as a side-project fuelled by enthusiasm instead of proper 
 Some pieces of software start as testbed implementation of a newly proposed methodology, others come to life as wrappers or graphical interfaces for other packages, some others were never meant to be shared but are so useful that they became a package on their own.
 <!-- Missing: Whats the problem? -->
 
+## ID 7: Contributer Roles and Involvement
+<!-- Larger software project, but the same effort of the individual researcher leads to lower scores? -->
 
-
-## Open Source
-is not used in phase 1
+## ID 8: License
+Currently, whether the software is open source is not used in computing a treshold for phase one of the assessment procedure.
+However, we think the license is central for the value of  software as a research product.
+Above, we already discussed the different ways research software can have an impact - not only by direct usage, but also by reimporting and reusing software in other packages.
+This type of impact is not possible for closed-source software.
+In addition, many aspects of rigor are not possible to evaluate for closed-source software - for example, whether it is well-tested or whether bugs have been fixed.
+We therefore propose to either score the license directly, giving points to open-source licenses as defined by the Open Source Society (https://opensource.org/licenses), or to assess the indicators of rigor as discussed in the second part of this commentary, where it is only possible to gain points for certain aspects of rigor if the software is open-source.
 
 ## ID 17: Reusability Indicator
 This is one of only two criteria used in phase one of their proposed assessment procedure, and therefore is of central importance.
@@ -143,13 +148,33 @@ For example, the current definitions read
 
 We think that well-tested software implies systematic bug chasing and unit tests, and that the difference between "fairly extensive" and "extensive" documentation is unclear.
 As a result, this indicator is more of a "gut-feeling" indicator, roughly assessing the "size" of the software project.
-We instead propose to assess the different aspects of rigor separately, more sharply defined, and also assess "usage" indepentently from quality.
+We instead propose to assess "usage" or impact indepentently from quality/rigor.
+We also propose to assess the different aspects of rigor (testing, documentation, etc.) separately, and more sharply defined.
+We therefore dicuss in the following aspects of rigor for research software, and how they could be assessed.
 
 # Aspects of rigor for Software Implementations
-Best practices of SE:
-## unit testing
+Best-practises for software development can be used to assess rigor for research software.
+In the following, we discuss aspects that should be scored in phase one of the assessment.
+<!-- some introductory text missing -->
+<!-- maybe cite
+https://joss.readthedocs.io/en/latest/review_criteria.html
+and
+https://joss.readthedocs.io/en/latest/review_checklist.html
+here -->
+## Tests
+Tests are essential to verify the correctness of scientific software.
+They are usually separated into different categories:
+*Unit tests* evaluate only small pieces of code, for example specific R-functions.
+*Functional Tests* test whether the input of a user interacting with the software leads to the correct output.
+There are many more types of tests, and the type of tests appropriate for a specific software product depends on the software itself.
+However, we argue it should at least be tested whether the software can be installed on different platforms, and whether the core functionality of the software is executed without errors (*Smoke Test*).
+In addition, it might be possible to give higher scores if different types of tests are employed, or to define a minimum of tests types that should be present, for example *unit tests*, *integration tests* and *functional tests*.
+Another metric that could be assessed is code coverage, defined as the percentage of code lines that are executed during testing.
+However, we would like to note that this metric is to be taken with a grain of salt, as the quality and number of the tests is not taken into account.
+
 ## CI
-## documentation
+## Documentation
+
 ## open source
 ## bug reporting and disclosure in changelogs
 ## activate maintenance
