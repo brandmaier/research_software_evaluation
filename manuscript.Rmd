@@ -106,6 +106,9 @@ We strongly object to the metric Github stars.
 First of all, it is tied only to a single, commercial platform and allows no freedom to choose free alternatives such as local Gitlab instances or other platforms.
 More importantly, we question the validity of such metrics that like rating systems on commercial platforms are too easy to be gamed by creating fake accounts that provide high ratings.
 
+## ID 6: Date of most recent substantive update
+<!-- see issue #7 -->
+
 ## ID 14: Lines of Code
 We discourage the lines of code (LOC) metric that was proposed to measure effort.
 There are several problems in using this indicator.
@@ -155,6 +158,7 @@ We therefore dicuss in the following aspects of rigor for research software, and
 # Aspects of rigor for Software Implementations
 Best-practises for software development can be used to assess rigor for research software.
 In the following, we discuss aspects that should be scored in phase one of the assessment.
+For the reasons outline above, we propose to score those instead of the reusability indicator (item 17 in table 3).
 <!-- some introductory text missing -->
 <!-- maybe cite
 https://joss.readthedocs.io/en/latest/review_criteria.html
@@ -171,14 +175,33 @@ However, we argue it should at least be tested whether the software can be insta
 In addition, it might be possible to give higher scores if different types of tests are employed, or to define a minimum of tests types that should be present, for example *unit tests*, *integration tests* and *functional tests*.
 Another metric that could be assessed is code coverage, defined as the percentage of code lines that are executed during testing.
 However, we would like to note that this metric is to be taken with a grain of salt, as the quality and number of the tests is not taken into account.
+Tests should be automated, or at least reproducible.
+This rules out closed-source software tests.
 
-## CI
 ## Documentation
+Just like for tests, there are different types of documentation.
+For example, there are tutorials showcasing the usage of software with examples, and there is API documentation (e.g., docstrings) for individuall functions and classes.
+We propose to identify relevant categories of documentation for research software and score the presence of each of them separately. <!-- maybe propose the ones from joss: Installation Instructions, Tutorials, API, Community Guidelines -->
+Another aspect of documentation is the possibility to ask questions to the package authors (see for example the lavaan mailing list).
 
-## open source
-## bug reporting and disclosure in changelogs
-## activate maintenance
-## reproducibility
+## Maintenance
+Maintaining a software package is often more work than writing it.
+This should be reflected in the assessment procedure.
+We propose to score several aspects of maintenance seperately, such as bug fixing, changelogs, and the possibility to report bugs as a user (for example via issues).
+Note that some aspects of maintenance might not be assessed for closed-source software, for example, if changelogs do not include fixed bugs.
+
+## Peer-Review
+
+Similar to peer-review for manuscripts, software code is amenable to peer-review.
+It is common practice in software development to have peers review code.
+For example, if a code base is changed, it is good practice to request a change with the developer team before actually changing the code base.
+The change is reviewed by experts and/or maintainers before it is integrated in the active branch of development.
+In developing these guidelines, we see the opportunity to foster such good practices and reward researchers that actively engage in reviewing computer code.
+Software peer-review is increasingly becoming recognized as a means to enable better research software.
+Peer-review can happen in the context of dedicated software journal (e.g, Journal of Statistical Software), as part of the standard review process (for guidelines, see https://www.carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html), or as part of submissions to software archives that guarantee certain standards (e.g., rOpenSci).
+We suggest that active participation in the review of scientific software, independent of the involvement or maintenance of specific software products, should be a dimension of positive evaluation.
+
+## Reproducibility
 
 # Measuring Impact
 In our opinion, total citation metrics, number of users, downloads per month and similar may provide a coarse measure for the impact of a software package, even though it is important to note the severe shortcoming we described above.
@@ -186,6 +209,13 @@ In our opinion, total citation metrics, number of users, downloads per month and
 Complementing the quantitative aspect of impact, we suggest to introduce a mandatory qualitative judgement on the impact of the software, which fits with what @gartner2022responsible proposed as indicator "merit / impact statement".
 In our view, researchers should be requested to indicate at least one (and up to three) empirical research projects that directly benefited from the software contributions they made.
 We believe this is a fair assessment of the real impact no matter whether someone contributed documentation/tutorial to run certain types of models, whether someone contributed a specific feature that enabled a given research project to run their analysis, or whether someone is the author of the entire package.
+
+# Summary
+
+In sum, we are thankful to  @gartner2022responsible for highlighting the importance of research software contributions as scientifically valuable products.
+Specifically, we value the distinction of different classes of software projects (e.g., small scripts vs large-scale team efforts), ....
+However, we are critical of the proposed quantitative impact measures.
+For the reasons mentioned here, We propose to emphasize that qualitative statement on impact, in which software authors should argue in how far their project paved the way for other scientific endeavours.
 
 \newpage
 
