@@ -191,7 +191,6 @@ We propose to score several aspects of maintenance seperately, such as bug fixin
 Note that some aspects of maintenance might not be assessed for closed-source software, for example, if changelogs do not include fixed bugs.
 
 ## Peer-Review
-
 Similar to peer-review for manuscripts, software code is amenable to peer-review.
 It is common practice in software development to have peers review code.
 For example, if a code base is changed, it is good practice to request a change with the developer team before actually changing the code base.
