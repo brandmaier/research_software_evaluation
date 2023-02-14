@@ -73,9 +73,9 @@ Based on four basic principles of a more responsible research assessment in acad
 We specifically endorse the increased emphasis on research software as recognizable and laudable scientific contribution.
 Why are research software contributions important scientific contributions?
 We would like to respond with a quote from the Science Code Manifesto (http://sciencecodemanifesto.org/):
-"Software is an essential research product, and the effort to produce, maintain, adapt, and curate code must be recognized."
-and
 "Software is a cornerstone of science. Without software, twenty-first century science would be impossible."
+and
+"Software is an essential research product, and the effort to produce, maintain, adapt, and curate code must be recognized."
 Yet, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivise software development and, specifically, good software engineering practice that we would expect from a research software engineer [@baxter2012research].
 Here, we specifically comment on the proposed evaluation scheme for research software contributions (Table 3 of @gartner2022responsible).
 While the authors criticize the use of invalid metrics to evaluate publications (Journal Impact Factors, Citations, H-Index), those same metrics (or variants thereof) are mainly relied on in their proposal to evaluate research software.
