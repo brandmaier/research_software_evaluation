@@ -68,55 +68,165 @@ set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
-Based on four basic principles of a more responsible research assessment in academic hiring and promotion processes [@schonbrodt2022responsible], @gartner2022responsible suggested a specific implementation of these principles to broaden the range of what constitutes research contributions. Gaertner et al. provide evaluation schemes for published manuscripts, published datasets, and software contributions. 
+# Introduction
+Based on four basic principles of a more responsible research assessment in academic hiring and promotion processes [@schonbrodt2022responsible], @gartner2022responsible suggested a specific evaluation scheme for published manuscripts, reusable datasets, and research software.
 We specifically endorse the increased emphasis on research software as recognizable and laudable scientific contribution.
-Why are research software contributions important scientific contributions? We would like to respond with a quote from the Science Code Manifesto (http://sciencecodemanifesto.org/):
-"Software is an essential research product, and the effort to produce, maintain, adapt, and 
-curate code must be recognized."
-and
+Why are research software contributions important scientific contributions?
+We would like to respond with a quote from the Science Code Manifesto (http://sciencecodemanifesto.org/):
 "Software is a cornerstone of science. Without software, twenty-first century science would be impossible."
-Yet, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivise software development and, specifically, good software engineering practice that we would expect from a research software engineer [@baxter2012research]. 
- Here, we specifically comment on the proposed evaluation scheme for research software contributions (Table 3 of @gartner2022responsible). We comment on the dimensions metrics, lines of code, software engineering, impact, peer-review, usability. 
+and
+"Software is an essential research product, and the effort to produce, maintain, adapt, and curate code must be recognized."
+Yet, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivise software development and, specifically, good software engineering practice that we would expect from a research software engineer [@baxter2012research].
+Here, we specifically comment on the proposed evaluation scheme for research software contributions (Table 3 of @gartner2022responsible).
+While the authors criticize the use of invalid metrics to evaluate publications (Journal Impact Factors, Citations, H-Index), those same metrics (or ad hoc variants thereof) are mainly relied on in their proposal to evaluate research software.
+However, they same critisism applies to those metrics in the context of research software evaluation.
+We therefore argue to follow their evaluation scheme for publications: In a first stage, rigor should be evaluated, establishing whether the software product passes a certain treshold, and in the second stage, more complicated dimensions, such as impact, can be evaluated.
+In the following, we discuss their proposed criteria.
+We then discuss rigor in the context of research software, and propose specific criteria to measure it.
+At last, we elaborate on the assessment of impact in the context of research software.
 
-## Metrics
+# Proposed Criteria
 
-@gartner2022responsible suggest the number of citations (their indicator #9 in Table 3) to evaluate the impact of a software package. They acknowledge the problem that citations inconsistently point to software packages and/or accompanying software packages. For example, one of the authors maintains the pdc package for R. Google scholar counts X citations to the package and X citations to the accompanying paper, of which XX citations cite both, which permits a simple addition of the citation counts.
+## ID 9: Citations
 
-<!-- This needs to be shortened a lot-->
-Date of first fully functional public version is a central field in the proposal as it serves as a denominator in computing citations relative to software age. In our own experience, research software often evolves very differently to the standards that software engineering prescribes. In best-practice software development, the first step is software specification or requirements engineering. This is the process of understanding and defining what features and services are required from the product and how they are to be offered. This involves research on existing solutions, discussions with users, user interface testing with mockups or user observations while testing prototypes. A requirement specification documents the expected functionality, such that development time and cost can be estimated and requirements can be formally checked with the final product for consistency and completeness. From our own experience, hardly any of these steps apply to scientific software development. Scientific software is often developed as a side-project fuelled by enthusiasm instead of proper funding. Some pieces of software start as testbed implementation of a newly proposed methodology, others come to life as wrappers or graphical interfaces for other packages, some others were never meant to be shared but are so useful that they became a package on their own. 
+@gartner2022responsible suggest the number of citations (their indicator #9 in Table 3) to evaluate the impact of a software package.
+However, citations suffer from serious shortcoming when used to evaluate the impact of research software.
+For example, it is much more commonly accepted to cite data analysis packages than supporting packages (such as papaja [@R-papaja], RMarkdown, RStudio, and LaTeX used to render this article). Therefore, the total citation count is confounded with the type of software.
+A further complication arises through the fact that functionality of successful, modular scientific software is imported, re-used, and re-exported in other software packages.
+While we highly encourage this from both a software engineering perspective and for scientific progress, it poses further difficulties to citation-based metrics.
+This especially punishes highly relied-on backends such as optimization algorithms: For example, the NLopt optimization suite is cited 1,711 times on google scholar.
+However, the algorithms from that suite are used in countless software packages, for example, as a backend of OpenMx which again has 811 citations.
+Moreover, the algorithms from that suite are all open source, and therefore serve as a reference for others.
+As an example, consider the lme4 package, that adapted one of the algortihms from NLopt.
+This package has 57,820 citations on google scholar, yet no single lme4 user probably ever cited the NLopt library.
+We therefore argue that merrit statements are much more useful to assess impact of research software.
 
-We strongly object to the metric Github stars. First of all, it is tied only to a single, commercial platform and allows no freedom to choose free alternatives such as local Gitlab instances or other platforms. More importantly, we question the validity of such metrics that like rating systems on commercial platforms are too easy to be gamed by creating fake accounts that provide high ratings.
+## ID 11: GitHub Stars
 
-In our opinion, total citation metrics, number of users, downloads per month and similar may provide a coarse measure for the impact of a software package, even though it is important to note that these metrics are difficult to compare across different types of software packages. For example, it is probably more commonly accepted to cite data analysis packages (particularly if they are commercial packages) than supporting packages (such as papaja [@R-papaja] used to render this article). A further complication arises through the fact that functionality of successful, modular scientific software is imported, re-used, and re-exported in other software packages. While we highly encourage this from both a software engineering perspective and for scientific progress, it poses further difficulties to citation-based metrics. For example, the pdc package [@pdc-paper] offers functions to cluster time-series based on relative complexity. The TSclust package [@TSclust] is a wrapper package that unites several divergence measures for time series clustering conveniently in a single package, particularly, the pdc clustering approach. This potentially leads to researchers only citing the TSclust package but not the original algorithm (e.g., as in the work by @staroverova).
+We object to the use of Github stars as a general metric.
+First of all, it is tied only to a single, commercial platform and allows no freedom to choose free alternatives such as local Gitlab instances or other platforms.
+More importantly, we question the validity of such metrics that like rating systems on commercial platforms are too easy to be gamed by creating fake accounts that provide high ratings.
 
-Last, we would like to point out that the request for citation metrics with respect to software packages seems inconsistent with the authors condemnation of citation metrics for publications.
+## ID 6: Date of most recent substantive update
+<!-- see issue #7 -->
 
-Complementing the quantitative aspect of impact, we suggest to introduce a mandatory qualitative judgement on the impact of the software, which fits with what @gartner2022responsible proposed as indicator "merit / impact statement". In our view, researchers should be requested to indicate at least one (and up to three) empirical research projects that directly benefited from the software contributions they made. We believe this is a fair assessment of the real impact no matter whether someone contributed documentation/tutorial to run certain types of models, whether someone contributed a specific feature that enabled a given research project to run their analysis, or whether someone is the author of the entire package.
+## ID 14: Lines of Code
 
-## Software Engineering standards
+We discourage the lines of code (LOC) metric that was proposed to measure effort.
+There are several problems in using this indicator.
+First of all, lines of code for code contributions highly depends on the programming language, mastery and personal programming style.
+In particular, large LOC of a researcher may simply mean that they write inefficient and repetitive code, one of the great sins of programming.
+A feature of good software is modularity because it enables reuse of functions both inside and outside the project.
+A great example is the CRAN library that enables packages to built upon other packages and reuse their functionality. However, if LOC were a metric that a researcher are compared with, it encourages researchers to copy&paste chunks of code from other packages instead of importing them in their project.
+Second, lines of code is an ambiguous metric.
+It can be calculated differently depending on whether comments do count or whether physical lines of code or logical lines of code are counted.
 
-As mentioned before, software engineering standards are often not adhered to in the ad-hoc
-development of scientific software. Thus, at the minimum, we would like to encourage researchers if they provide unit tests. Unit tests are the backbone of software quality and testing. Developing unit tests may often cost more time than developing the actual code. At the same time, they are usually unrecognized because they are invisible to the end user and provide no functionality on its own. A specific set of guidelines implements FAIR for research software and may serve to quantify the FAIRness of research software [@barker2022introducing].
+## ID 5: Date of first fully functional public version
 
-## Lines of code
+The date of the first fully functional public version is a central field in the proposal as it serves as a denominator in computing citations relative to the software age.
+Besides the problem of creating an ad hoc citation metric, this date is difficult to determine and to verify.
+In our own experience, research software often evolves driven by time constraints and the need for specific functionality, not according to feature completeness.
+<!-- I deleted the part about how software should be planned and written - I found it very good and interesting, but we don't have much space :/ -->
+It is often developed as a side-project fuelled by enthusiasm instead of proper funding.
+Some pieces of software start as testbed implementation of a newly proposed methodology, others come to life as wrappers or graphical interfaces for other packages, some others were never meant to be shared but are so useful that they became a package on their own.
+Feature completeness is not a valid measure in these cases.
 
-To our knowledge, there is no consensus as how to measure productivity or quality of software contributions and no single metric seems to be a valid measure [e.g., @7332509]. Specifically, we discourage the lines of code (LOC) metric that was proposed to measure effort. Lines of code is a common metric in software development useful to gauge the size of an entire code base or its change over time. There are several problems in using this indicator for effort. First of all, lines of code is an ambiguous metric. It can be calculated differently depending on whether comments do count or whether physical lines of code or logical lines of code are counted.  Second, lines of codes for code contributions highly depends on the programming language, mastery and personal programming style. In particular, large LOC of a researcher may simply mean that they write inefficient and repetitive code, one of the great sins of programming. A feature of good software is modularity because it enable reuse of functions both inside and outside the project. A great example is the CRAN library that enables packages to built upon other packages and reuse their functionality. However, if LOC were a metric that a researcher are compared with, it encourages researchers to copy&paste chunks of code from other packages instead of importing them in their project.  
+## ID 7: Contributer Roles and Involvement
+<!-- Larger software project, but the same effort of the individual researcher leads to lower scores? -->
 
+## ID 8: License
+Currently, whether the software is open source is not used in computing a treshold for phase one of the assessment procedure.
+However, we think the license is central for the value of  software as a research product.
+Above, we already discussed the different ways research software can have an impact --- not only by direct usage, but also by reimporting and reusing software in other packages.
+This type of impact is not possible for closed-source software.
+In addition, many aspects of rigor are not possible to evaluate for closed-source software --- for example, whether it is well-tested or whether bugs have been fixed.
+We therefore propose to either score the license directly, giving points to open-source licenses as defined by the Open Source Society (https://opensource.org/licenses), or to assess the indicators of rigor as discussed in the second part of this commentary, where it is only possible to gain points for certain aspects of rigor if the software is open-source.
 
+## ID 17: Reusability Indicator
+
+This is one of only two criteria used in phase one of their proposed assessment procedure, and therefore is of central importance.
+We think this item tries to assess important aspects of rigor in software development: documentation, maintenance, testing and bug chasing, for example.
+However, it conflates *usablity* with *usage*, as it also tries to assess the number of users.
+In addition, the criteria for the different categories are not sharply defined.
+For example, the current definitions read
+
+> R2 (2 points): Well-developed and tested software, fairly extensive documentation, ...
+
+> R3 (4 points): ...extensive documentation, systematic bug chasing and unit testing, ...
+
+We think that well-tested software implies systematic bug chasing and unit tests, and that the difference between "fairly extensive" and "extensive" documentation is unclear.
+As a result, this indicator is more of a "gut-feeling" indicator, roughly assessing the "size" of the software project.
+We instead propose to assess "usage" or impact indepentently from quality/rigor.
+We also propose to assess the different aspects of rigor (testing, documentation, etc.) separately, and more sharply defined.
+We therefore dicuss in the following aspects of rigor for research software, and how they could be assessed.
+
+# Aspects of rigor for Software Implementations
+
+Best-practises for software development can be used to assess rigor for research software.
+In the following, we discuss aspects that should be scored in phase one of the assessment.
+For the reasons outline above, we propose to score those instead of the reusability indicator (item 17 in table 3).
+<!-- some introductory text missing -->
+<!-- maybe cite
+https://joss.readthedocs.io/en/latest/review_criteria.html
+and
+https://joss.readthedocs.io/en/latest/review_checklist.html
+here -->
+
+## Tests
+
+Tests are essential to verify the correctness of scientific software.
+They are usually separated into different categories:
+*Unit tests* evaluate only small pieces of code, for example specific R-functions.
+*Functional Tests* test whether the input of a user interacting with the software leads to the correct output.
+There are many more types of tests, and the type of tests appropriate for a specific software product depends on the software itself.
+However, we argue it should at least be tested whether the software can be installed on different platforms, and whether the core functionality of the software is executed without errors (*Smoke Test*).
+In addition, it might be possible to give higher scores if different types of tests are employed, or to define a minimum of tests types that should be present, for example *unit tests*, *integration tests* and *functional tests*.
+Another metric that could be assessed is code coverage, defined as the percentage of code lines that are executed during testing.
+However, we would like to note that this metric is to be taken with a grain of salt, as the quality and number of the tests is not taken into account.
+Tests should be automated, or at least reproducible.
+This rules out closed-source software tests.
+
+## Documentation
+
+Just like for tests, there are different types of documentation.
+For example, there are tutorials showcasing the usage of software with examples, and there is API documentation (e.g., docstrings) for individuall functions and classes.
+We propose to identify relevant categories of documentation for research software and score the presence of each of them separately. <!-- maybe propose the ones from joss: Installation Instructions, Tutorials, API, Community Guidelines -->
+Another aspect of documentation is the possibility to ask questions to the package authors (see for example the lavaan mailing list).
+
+## Maintenance
+
+Maintaining a software package is often more work than writing it.
+This should be reflected in the assessment procedure.
+We propose to score several aspects of maintenance seperately, such as bug fixing, changelogs, and the possibility to report bugs as a user (for example via issues).
+Note that some aspects of maintenance might not be assessed for closed-source software, for example, if changelogs do not include fixed bugs.
 
 ## Peer-Review
 
-Similar to peer-review for manuscripts, software code is amenable to peer-review. It is common
-practice in corporate software development, to have peers review code. For example, if a code base is changed, it is good practice to request a change with the developer team before actually changing the code base. The change is reviewed by experts and/or maintainers before it is integrated in the active branch of development. In developing these guidelines, we see the opportunity to foster such good practices and reward researchers that actively engage in reviewing computer code. Software peer-review is increasingly becoming recognized as a means to enable better research software. Peer-review can happen in the context of dedicated software journal (e.g, Journal of Statistical Software), as part of the standard review process (for guidelines, see https://www.carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html), or as part of submissions to software archives that guarantee certain standards (e.g., rOpenSci). We suggest that active participation in the review of scientific software, independent of the involvement or maintenance of specific software products, should be a dimension of positive evaluation.
+Similar to peer-review for manuscripts, software code is amenable to peer-review.
+It is common practice in software development to have peers review code.
+For example, if a code base is changed, it is good practice to request a change with the developer team before actually changing the code base.
+The change is reviewed by experts and/or maintainers before it is integrated in the active branch of development.
+In developing these guidelines, we see the opportunity to foster such good practices and reward researchers that actively engage in reviewing computer code.
+Software peer-review is increasingly becoming recognized as a means to enable better research software.
+Peer-review can happen in the context of dedicated software journal (e.g, Journal of Statistical Software), as part of the standard review process (for guidelines, see https://www.carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html), or as part of submissions to software archives that guarantee certain standards (e.g., rOpenSci).
+We suggest that active participation in the review of scientific software, independent of the involvement or maintenance of specific software products, should be a dimension of positive evaluation.
 
 ## Reproducibility
 
-->Aaron and Max
+# Measuring Impact
 
+In our opinion, total citation metrics, number of users, downloads per month and similar may provide a coarse measure for the impact of a software package, even though it is important to note the severe shortcoming we described above.
 
-## Summary
+Complementing the quantitative aspect of impact, we suggest to introduce a mandatory qualitative judgement on the impact of the software, which fits with what @gartner2022responsible proposed as indicator "merit / impact statement".
+In our view, researchers should be requested to indicate at least one (and up to three)  research projects that directly benefited from the software contributions they made.
+We believe this is a fair assessment of the real impact no matter whether someone contributed documentation/tutorial to run certain types of models, whether someone contributed a specific feature that enabled a given research project to run their analysis, or whether someone is the author of the entire package.
 
-In sum, we are thankful to  @gartner2022responsible for highlighting the importance of research software contributions as scientifically valuable products. Specifically, we value the distinction of different classes of software projects (e.g., small scripts vs large-scale team efforts), ....  However, we are critical of the proposed quantitative impact measures. For the reasons mentioned here, We propose to emphasize that qualitative statement on impact, in which software authors should argue in how far their project paved the way for other scientific endeavours.
+# Summary
+
+In sum, we are thankful to  @gartner2022responsible for highlighting the importance of research software contributions as scientifically valuable products.
+Specifically, we value the distinction of different classes of software projects (e.g., small scripts vs large-scale team efforts), ....
+However, we are critical of the proposed quantitative impact measures.
+For the reasons mentioned here, We propose to emphasize that qualitative statement on impact, in which software authors should argue in how far their project paved the way for other scientific endeavours.
 
 \newpage
 
