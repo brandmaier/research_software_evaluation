@@ -70,7 +70,6 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 # Introduction
 Based on four basic principles of a more responsible research assessment in academic hiring and promotion processes [@schonbrodt2022responsible], @gartner2022responsible suggested a specific evaluation scheme for published manuscripts, reusable datasets, and research software.
-Gaertner et al. provide evaluation schemes for published manuscripts, published datasets, and software contributions.
 We specifically endorse the increased emphasis on research software as recognizable and laudable scientific contribution.
 Why are research software contributions important scientific contributions?
 We would like to respond with a quote from the Science Code Manifesto (http://sciencecodemanifesto.org/):
