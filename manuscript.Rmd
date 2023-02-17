@@ -6,7 +6,7 @@ author:
   - name          : "Andreas M. Brandmaier"
     affiliation   : "1,2,3"
     corresponding : yes    # Define only one corresponding author
-    address       : "Postal address"
+    address       : "Rüdesheimer Str. 50, 14197 Berlin"
     email         : "andreas.brandmaier@medicalschool-berlin.de"
     role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
       - "Conceptualization"
@@ -14,13 +14,13 @@ author:
       - "Writing - Review & Editing"
       - "Supervision"
   - name          : "Maximilian Ernst"
-    affiliation   : "2"
+    affiliation   : "2,4"
     role:
       - "Conceptualization"
       - "Writing - Original Draft Preparation"
       - "Writing - Review & Editing"
   - name          : "Aaron Peikert"
-    affiliation   : "2"
+    affiliation   : "2,3,4"
     role:
       - "Conceptualization"
       - "Writing - Original Draft Preparation"
@@ -32,6 +32,8 @@ affiliation:
   - id            : "2"
     institution   : "Max Planck Institute for Human Development"
   - id            : "3"
+    institution   : "Max Planck UCL Centre for Computational Psychiatry and Ageing Research"
+  - id            : "4"
     institution   : "Humboldt Universität zu Berlin"
     
 
@@ -77,13 +79,18 @@ We would like to respond with a quote from the Science Code Manifesto (http://sc
 and
 "Software is an essential research product, and the effort to produce, maintain, adapt, and curate code must be recognized."
 Yet, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivise software development and, specifically, good software engineering practice that we would expect from a research software engineer [@baxter2012research].
-Here, we specifically comment on the proposed evaluation scheme for research software contributions (Table 3 of @gartner2022responsible).
-While the authors criticize the use of invalid metrics to evaluate publications (Journal Impact Factors, Citations, H-Index), those same metrics (or ad hoc variants thereof) are mainly relied on in their proposal to evaluate research software.
+We suggest that criteria for research software contributions must capture two major dimensions: rigor and impact.
+Rigor means implementing highest standards and best practices for ensuring transparency, correctness and reusability of a software.
+From this perspective, we comment on the proposed evaluation scheme for research software contributions (Table 3 of @gartner2022responsible) and propose alternatives to better capture rigor and impact.
+
+<!--While the authors criticize the use of invalid metrics to evaluate publications (Journal Impact Factors, Citations, H-Index), those same metrics (or ad hoc variants thereof) are mainly relied on in their proposal to evaluate research software.
 However, they same critisism applies to those metrics in the context of research software evaluation.
 We therefore argue to follow their evaluation scheme for publications: In a first stage, rigor should be evaluated, establishing whether the software product passes a certain treshold, and in the second stage, more complicated dimensions, such as impact, can be evaluated.
 In the following, we discuss their proposed criteria.
 We then discuss rigor in the context of research software, and propose specific criteria to measure it.
 At last, we elaborate on the assessment of impact in the context of research software.
+
+-->
 
 # Proposed Criteria
 
@@ -99,13 +106,13 @@ However, the algorithms from that suite are used in countless software packages,
 Moreover, the algorithms from that suite are all open source, and therefore serve as a reference for others.
 As an example, consider the lme4 package, that adapted one of the algortihms from NLopt.
 This package has 57,820 citations on google scholar, yet no single lme4 user probably ever cited the NLopt library.
-We therefore argue that merrit statements are much more useful to assess impact of research software.
+We therefore argue that qualitative merrit statements are much more useful to assess impact of research software.
 
 ## ID 11: GitHub Stars
 
 We object to the use of Github stars as a general metric.
-First of all, it is tied only to a single, commercial platform and allows no freedom to choose free alternatives such as local Gitlab instances or other platforms.
-More importantly, we question the validity of such metrics that like rating systems on commercial platforms are too easy to be gamed by creating fake accounts that provide high ratings.
+First of all, it is tied only to a single, commercial platform.
+More importantly, we question the validity of such metrics that, like rating systems on commercial platforms, are too easy to be gamed.
 
 ## ID 6: Date of most recent substantive update
 <!-- see issue #7 -->
@@ -118,8 +125,8 @@ First of all, lines of code for code contributions highly depends on the program
 In particular, large LOC of a researcher may simply mean that they write inefficient and repetitive code, one of the great sins of programming.
 A feature of good software is modularity because it enables reuse of functions both inside and outside the project.
 A great example is the CRAN library that enables packages to built upon other packages and reuse their functionality. However, if LOC were a metric that a researcher are compared with, it encourages researchers to copy&paste chunks of code from other packages instead of importing them in their project.
-Second, lines of code is an ambiguous metric.
-It can be calculated differently depending on whether comments do count or whether physical lines of code or logical lines of code are counted.
+<!--Second, lines of code is an ambiguous metric.
+It can be calculated differently depending on whether comments do count or whether physical lines of code or logical lines of code are counted.-->
 
 ## ID 5: Date of first fully functional public version
 
@@ -135,12 +142,12 @@ Feature completeness is not a valid measure in these cases.
 <!-- Larger software project, but the same effort of the individual researcher leads to lower scores? -->
 
 ## ID 8: License
-Currently, whether the software is open source is not used in computing a treshold for phase one of the assessment procedure.
-However, we think the license is central for the value of  software as a research product.
-Above, we already discussed the different ways research software can have an impact --- not only by direct usage, but also by reimporting and reusing software in other packages.
-This type of impact is not possible for closed-source software.
+At present, the question of whether the software is open source is not used in the computation of a treshold for phase one of the assessment procedure.
+However, we think an open license is central for assessing both rigor and (potential) impact.
+Above, we already discussed the different ways research software can have an impact --- not only by direct usage, but also by re-using software in other packages.
+Broader impact in science is more likely with open source software.
 In addition, many aspects of rigor are not possible to evaluate for closed-source software --- for example, whether it is well-tested or whether bugs have been fixed.
-We therefore propose to either score the license directly, giving points to open-source licenses as defined by the Open Source Society (https://opensource.org/licenses), or to assess the indicators of rigor as discussed in the second part of this commentary, where it is only possible to gain points for certain aspects of rigor if the software is open-source.
+Therefore, we propose to either score a package's license, giving points to open-source licenses (those approved in a review process by the Open Source Society (https://opensource.org/licenses). <!--Alternatively, one may indirectly score openness by assessing the indicators of rigor as discussed in the second part of this commentary, where it is only possible to gain points for certain aspects of rigor if the software is open-source.-->
 
 ## ID 17: Reusability Indicator
 
@@ -156,7 +163,7 @@ For example, the current definitions read
 
 We think that well-tested software implies systematic bug chasing and unit tests, and that the difference between "fairly extensive" and "extensive" documentation is unclear.
 As a result, this indicator is more of a "gut-feeling" indicator, roughly assessing the "size" of the software project.
-We instead propose to assess "usage" or impact indepentently from quality/rigor.
+We instead propose to assess "usage" or impact independently of rigor.
 We also propose to assess the different aspects of rigor (testing, documentation, etc.) separately, and more sharply defined.
 We therefore dicuss in the following aspects of rigor for research software, and how they could be assessed.
 
@@ -211,7 +218,6 @@ Software peer-review is increasingly becoming recognized as a means to enable be
 Peer-review can happen in the context of dedicated software journal (e.g, Journal of Statistical Software), as part of the standard review process (for guidelines, see https://www.carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html), or as part of submissions to software archives that guarantee certain standards (e.g., rOpenSci).
 We suggest that active participation in the review of scientific software, independent of the involvement or maintenance of specific software products, should be a dimension of positive evaluation.
 
-## Reproducibility
 
 # Measuring Impact
 
