@@ -91,7 +91,7 @@ We would like to respond with a quote from the Science Code Manifesto (http://sc
 and
 "Software is an essential research product, and the effort to produce, maintain, adapt, and curate code must be recognized."
 Yet, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivise software development  and, specifically, good software engineering practice that we would expect from a research software engineer [@baxter2012research].
-We suggest that criteria for research software contributions must capture two major dimensions: rigor and impact.
+In line with principle 3 of @schonbrodt2022responsible, we suggest that criteria for research software contributions must capture two major dimensions: rigor and impact.
 Impact measures whether the scholarly effort and the implementation and dissemination actually had a visible effect on the field.  
 Rigor means implementing highest standards and best practices for ensuring transparency, correctness and reusability of a piece of software. 
 By setting a high bar of rigor in research software assessment in academic hiring and promotion, we hope to foster the creation of better software and thus better science.
