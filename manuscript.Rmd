@@ -161,7 +161,7 @@ However, we think an open license is central for assessing both rigor and (poten
 Above, we already discussed the different ways research software can have an impact --- not only by direct usage, but also by re-using software in other packages.
 Broader impact in science is more likely with open source software.
 In addition, many aspects of rigor are not possible to evaluate for closed-source software --- for example, whether it is well-tested or whether bugs have been fixed.
-Therefore, we propose to penalize software if it does not adhere to an open-source licenses (those approved in a review process by the Open Source Society (https://opensource.org/licenses) by allowing them only half of the achievable total points. <!--Alternatively, one may indirectly score openness by assessing the indicators of rigor as discussed in the second part of this commentary, where it is only possible to gain points for certain aspects of rigor if the software is open-source.-->
+Therefore, we propose to penalize software if it does not adhere to an open-source licenses (those approved in a review process by the Open Source Initiative (https://opensource.org/licenses) by allowing them only half of the achievable total points. <!--Alternatively, one may indirectly score openness by assessing the indicators of rigor as discussed in the second part of this commentary, where it is only possible to gain points for certain aspects of rigor if the software is open-source.-->
 
 ## ID 17: Reusability Indicator
 
