@@ -126,7 +126,8 @@ In addition, authors have a chance to explain why their active maintenance may b
 ## ID 9: Citations
 
 @gartner2022responsible suggest the number of citations to evaluate the impact of a software package.
-However, citations suffer from serious shortcomings when used to evaluate the impact of research software, particularly, when used comparatively in the context of hire and promotion.
+First, we like to point out an inconsistency of proposing citation-based metrics and the propositions of @schonbrodt2022responsible. who reminded us that a core principle of the implementation of DORA is "abandon the use of invalid quantitative metrics of research quality and productivity in hiring and promotion" (p.2) and instead to focus on individual achievements.
+Further, citations suffer from serious shortcomings when used to evaluate the impact of research software, particularly, when used comparatively in the context of hire and promotion.
 For example, it is much more commonly accepted to cite data analysis packages than supporting packages (such as papaja [@R-papaja] used to render this article). 
 Further, functionality of successful, modular scientific software is ideally reused in other software packages to avoid duplication of code and enable faster development of new software.
 While we highly encourage this from both a software engineering perspective and for scientific progress, it challenges the validity of citation-based metrics for impact.
@@ -134,8 +135,8 @@ For example, consider the NLopt optimization suite, which counts 1,711 citations
 NLopt is a backbone for many scientific model fitting packages both because it implements various optimization algorithm but also because it is open-source and can inspire re-implementations of these algorithms.
 For example, consider the famous lme4 package [@bates2014fitting] for generalized linear mixed-effects models, that is partly based on NLopt.
 This package has more than 58,000 citations on Google scholar, yet it is unlikely that researchers will cite the underlying optimization algorithm.
-<!--For example, the pdc package [@pdc-paper] offers functions to cluster time-series based on relative complexity.
-As another example, the TSclust package [@TSclust] is a wrapper to several dissimilarity measures for clustering time series. 
+For another example, the pdc package [@pdc-paper] offers functions to cluster time-series based on relative complexity.
+<!--As another example, the TSclust package [@TSclust] is a wrapper to several dissimilarity measures for clustering time series. 
 Some of us maintain the pdc clustering package [@pdc-paper], which is contained in TSclust and we saw that researchers use the pdc approach but only cite the TSclust package.
 -->
 
