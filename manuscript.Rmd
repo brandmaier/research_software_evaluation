@@ -138,11 +138,6 @@ This package has more than 58,000 citations on Google scholar, yet it is unlikel
 As another example, the TSclust package [@TSclust] is a wrapper to several dissimilarity measures for clustering time series. 
 Some of us maintain the pdc clustering package [@pdc-paper], which is contained in TSclust and we saw that researchers use the pdc approach but only cite the TSclust package.
 -->
-## ID 11: GitHub Stars
-
-We object to the use of Github stars as a general metric.
-First of all, it is tied only to a single, commercial platform.
-More importantly, we question the validity of such metrics that, like rating systems on commercial platforms, are too easy to be gamed.
 
 ## ID 14: Lines of Code
 
@@ -223,7 +218,7 @@ We propose to score two aspects of maintenance separately, maintaining the actua
 
 ## Measuring Impact
 
-In our opinion, total citation metrics, number of users, downloads per month and similar may provide a coarse measure for the impact of a software package, even though it is important to note the shortcomings we described above.
+In our opinion, total citation metrics, number of users, downloads per month, github stars and similar may provide a coarse measure for the impact of a software package, even though it is important to note the shortcomings we described above.
 
 We believe that the suggested merit statement is most useful to assess impact of research software and that this should be the primary statement for committee members to evaluate if they are less concerned with the technical aspects of research software development.
 
