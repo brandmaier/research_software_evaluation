@@ -90,7 +90,7 @@ We would like to respond with a quote from the Science Code Manifesto (http://sc
 "Software is a cornerstone of science. Without software, twenty-first century science would be impossible."
 and
 "Software is an essential research product, and the effort to produce, maintain, adapt, and curate code must be recognized."
-However, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivize software development and, specifically, good software engineering practice [@baxter2012research].
+However, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivise software development and, specifically, good software engineering practice [@baxter2012research].
 In line with principle 3 of @schonbrodt2022responsible, we suggest that criteria for research software contributions must capture two major dimensions: rigor and impact.
 Impact measures whether the scholarly effort, implementation, and dissemination actually had a visible effect on the field.
 Rigor means implementing high standards and best practices for ensuring transparency, correctness, and reusability of a piece of software.
@@ -200,7 +200,7 @@ We believe this to be a fair assessment of the actual impact, independent on the
 In sum, we are thankful to @gartner2022responsible for highlighting the importance of research software contributions as scientifically valuable products.
 We believe the current proposal must aim to better reflect the distinction between rigor and impact for software, similar to what was proposed to evaluate journal articles.
 To this end, we emphasize a more fine-grained assessment of rigor and a qualitative statement on impact, in which software authors should argue in how far their project paved the way for other scientific endeavors.
-Last, we hope to arrive at an evaluation scheme that incentivizes the development of scientific open-source software.
+Last, we hope to arrive at an evaluation scheme that incentivises the development of scientific open-source software.
 
 \newpage
 
