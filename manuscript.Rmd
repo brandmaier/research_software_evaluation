@@ -199,7 +199,7 @@ We believe this to be a fair assessment of the actual impact, independent on the
 
 In sum, we are thankful to @gartner2022responsible for highlighting the importance of research software contributions as scientifically valuable products.
 We believe the current proposal must aim to better reflect the distinction between rigor and impact for software, similar to what was proposed to evaluate journal articles.
-To this end, we emphasize a more fine-grained assessment of rigor and a qualitative statement on impact, in which software authors should argue in how far their project paved the way for other scientific endeavors.
+To this end, we emphasize a more fine-grained assessment of rigor and a qualitative statement on impact, in which software authors should argue in how far their project paved the way for other scientific endeavours.
 Last, we hope to arrive at an evaluation scheme that incentivises the development of scientific open-source software.
 
 \newpage
