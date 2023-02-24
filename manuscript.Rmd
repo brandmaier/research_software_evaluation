@@ -136,7 +136,9 @@ In particular, many LOC may simply mean that a researcher writes inefficient and
 On the contrary, a feature of good software is modularity because it enables reusing functions both inside and outside the project, resulting in fewer LOC.
 
 ## ID 7: Contributor Roles and Involvement
-<!-- Larger software project, but the same effort of the individual researcher leads to lower scores? -->
+
+We support the standardised assessment of project contributor roles, similar to the Contributor Roles Taxonomy (CRediT; https://credit.niso.org). 
+However, we like to point out that the current evaluation schemes yields lower scores for the same effort of the individual researcher if they are part of a larger software project.
 
 ## ID 8: License
 At present, whether the software is open source is not used in the computation of a threshold in the prescreening phase.
