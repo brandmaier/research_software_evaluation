@@ -64,11 +64,13 @@ footnotelist      : no
 
 classoption       : "man"
 output            : papaja::apa6_pdf
-
 equal_contrib: yes
-
 header-includes: |
   \usepackage{hyperref}
+repro:
+  packages:
+    - papaja
+    - aaronpeikert/repro
 ---
 
 ```{r setup, include = FALSE}
