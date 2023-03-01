@@ -19,6 +19,10 @@ publish/: manuscript.pdf
 
 include .repro/Makefile_publish
 
+publish/PR%/: manuscript.pdf
+	mkdir -p $@
+	cp -r $^ $@
+
 ### Docker ###
 # this is a workaround for windows users
 # please set WINDOWS=TRUE and adapt WINPATH if you are a windows user
