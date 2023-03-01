@@ -1,0 +1,1 @@
+RUN tlmgr install apa6 threeparttable endfloat was multirow threeparttablex environ xpatch csquotes
