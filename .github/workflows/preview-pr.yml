@@ -12,7 +12,7 @@ permissions:
 
 env:
   PR_NUMBER: ${{ github.event.pull_request.number }}
-  GHP_URL: 'https://aaronpeikert.github.io/bayes-prereg/'
+  GHP_URL: 'https://brandmaier.github.io/research_software_evaluation/'
 
 jobs:
   preview:
