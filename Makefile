@@ -13,6 +13,8 @@ RUN2 = $(QRUN2)
 ### Rmd's ###
 include .repro/Makefile_Rmds
 
+manuscript.pdf: manuscript.tex
+
 publish/: manuscript.pdf
 
 include .repro/Makefile_publish
