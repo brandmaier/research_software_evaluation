@@ -1,4 +1,5 @@
 RUN install2.r --error --skipinstalled \ 
+  here \ 
   papaja
 RUN installGithub.r \ 
   aaronpeikert/repro@5075336 \ 
