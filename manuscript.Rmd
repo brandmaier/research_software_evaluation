@@ -123,10 +123,10 @@ Further, citations suffer from serious shortcomings when used to evaluate the im
 For example, citing data analysis packages is much more commonly accepted than citing supporting packages [such as papaja, @R-papaja, used to render this article].
 Further, functionality of successful, modular scientific software is ideally reused in other software packages to avoid code dublication and enable faster development of new software.
 While we highly encourage this from both a software engineering perspective and for scientific progress, it challenges the validity of citation-based metrics for impact.
-For example, consider the NLopt optimization suite, which counts 1,711 citations on Google scholar at the time of writing.
+For example, consider the `NLopt` optimization suite, which counts 1,711 citations on Google scholar at the time of writing.
 NLopt is a backbone for many scientific packages both because it implements various optimization algorithms but also because it is open-source and can inspire re-implementations of these algorithms.
-One such example is the famous lme4 package [@bates2014fitting] for generalized linear mixed-effects models, that is partly based on NLopt.
-This package has more than 58,000 citations on Google scholar, yet it is unlikely that researchers will cite the underlying optimization algorithm.
+One such example is the famous `lme4` package [@bates2014fitting] for generalized linear mixed-effects models, that is partly based on `NLopt`.
+`lme4` has more than 58,000 citations on Google scholar, yet it is unlikely that researchers will cite the underlying optimization algorithm.
 For another example, the pdc package [@pdc-paper] offers functions to cluster time series based on one specific algorithm.
 The TSclust package [@TSclust] is a wrapper package, which imports and makes accessible functionality from the pdc package together with various other clustering approaches, which is very useful from a users' perspective; however, we noticed that researchers cite TSclust instead of pdc, which makes citation-based metrics less valid.
 
