@@ -4,6 +4,8 @@ on:
   pull_request:
     types: [opened, synchronize]
     workflow_dispatch:
+permissions: 
+  contents: write
 
 env:
   PR_NUMBER: ${{ github.event.pull_request.number }}
