@@ -6,6 +6,7 @@ on:
     workflow_dispatch:
 permissions: 
   contents: write
+  id-token: write
 
 env:
   PR_NUMBER: ${{ github.event.pull_request.number }}
