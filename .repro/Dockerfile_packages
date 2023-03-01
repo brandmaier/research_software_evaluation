@@ -1,2 +1,5 @@
 RUN install2.r --error --skipinstalled \ 
   papaja
+RUN installGithub.r \ 
+  aaronpeikert/repro@5075336 \ 
+  benmarwick/wordcountaddin@e075baa

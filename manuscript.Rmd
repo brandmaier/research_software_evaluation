@@ -70,7 +70,8 @@ header-includes: |
 repro:
   packages:
     - papaja
-    - aaronpeikert/repro
+    - aaronpeikert/repro@5075336
+    - benmarwick/wordcountaddin@e075baa
 ---
 
 ```{r setup, include = FALSE}

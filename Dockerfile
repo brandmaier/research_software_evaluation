@@ -11,3 +11,6 @@ RUN MRAN=https://mran.microsoft.com/snapshot/${BUILD_DATE} \
   && echo "options(repos = c(CRAN='$MRAN'), download.file.method = 'libcurl')" >> /usr/local/lib/R/etc/Rprofile.site
 RUN install2.r --error --skipinstalled \ 
   papaja
+RUN installGithub.r \ 
+  aaronpeikert/repro@5075336 \ 
+  benmarwick/wordcountaddin@e075baa
