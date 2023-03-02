@@ -148,7 +148,7 @@ However, we like to point out that the current evaluation schemes yields lower s
 At present, whether the software is open source is not used in the computation of a threshold in the prescreening phase.
 However, an open license is central for assessing both rigor and (potentially) increasing impact and should be part of the phase I assessment.
 Above, we already discussed the different ways research software can have an impact --- not only by direct usage, but also by reusing software in other packages.
-Broader impact in science is more likely with open-source software.
+Open-source software makes broader impact more likely and is a prerequisite for full transparency and reproducibility [@peikert2021reproducible].
 In addition, many aspects of rigor are not possible to evaluate for closed-source software --- for example, whether it is well-tested or bugs have been fixed.
 Therefore, we propose to penalize software if it does not adhere to an open-source license (those approved in a review process by the Open Source Initiative (https://opensource.org/licenses) by allowing them only half of the total achievable points.
 
