@@ -5,3 +5,6 @@ A commentary on the evaluation of research software:
 
 To be submitted to Meta-Psychology.
 
+Latest manuscript version is here (not peer-reviewed, subject to change):
+
+https://brandmaier.github.io/research_software_evaluation/manuscript.pdf
