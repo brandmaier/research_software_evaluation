@@ -104,25 +104,17 @@ From this perspective, we comment on the proposed evaluation scheme for research
 
 # Proposed Criteria
 
-## ID 5: Date of first fully functional public version
+## ID 5: Date of first fully functional public version/ID 9: Citations
 
-The date of the first fully functional public version serves as a denominator in computing the number of citations (see ID 9) relative to software age.
-In our experience, research software often evolves driven by time constraints and the need for specific functionality, not according to feature completeness. 
-Thus, it may generally suffice to ask for the age of the software relative to its first public release without any constraints on functionality.
+Computing the citations in relation to age of software seems to be inconsistent with the proposal of @schonbrodt2022responsible, who reminded us that a core principle of the implementation of DORA is "abandon the use of invalid quantitative metrics of research quality and productivity in hiring and promotion" (p.2).
+It is unclear why an ad-hoc created quantitative metric for software would be in any way more valid than the equivalent for articles.
+In fact, there are several additional shortcomings in relation to software.
+We discuss shortcomings of the numerator (number of citations) here and the issues of the denominator (software age) in the next section.
 
-## ID 6: Date of most recent substantive update
 
-We believe it is not always clear when updates are considered 'substantive.'
-As an important aspect of rigor, software needs to be actively maintained.
-To assess this, we propose to provide a checkbox in which the author indicates whether a scientific software package is actively maintained (e.g., the software has a regular release cycle or an update within the last six months).
-In addition, authors have a chance to explain why their active maintenance may be different from these guidelines.
-
-## ID 9: Citations
-
-@gartner2022responsible suggest the number of citations to evaluate the impact of a software package.
-First, we like to point out an inconsistency in proposing citation-based metrics and the propositions of @schonbrodt2022responsible, who reminded us that a core principle of the implementation of DORA is "abandon the use of invalid quantitative metrics of research quality and productivity in hiring and promotion" (p.2) and instead to focus on individual achievements.
-Further, citations suffer from serious shortcomings when used to evaluate the impact of research software, particularly when used comparatively in the context of hire and promotion.
+Citations suffer from serious shortcomings when used to evaluate the impact of research software, particularly when used comparatively in the context of hiring and promotion.
 For example, citing data analysis packages is much more commonly accepted than citing supporting packages [such as papaja, @R-papaja, used to render this article].
+
 Further, functionality of successful, modular scientific software is ideally reused in other software packages to avoid code dublication and enable faster development of new software.
 While we highly encourage this from both a software engineering perspective and for scientific progress, it challenges the validity of citation-based metrics for impact.
 For example, consider the `NLopt` optimization suite, which counts 1,711 citations on Google scholar at the time of writing.
@@ -132,6 +124,12 @@ One such example is the famous `lme4` package [@bates2014fitting] for generalize
 For another example, the pdc package [@pdc-paper] offers functions to cluster time series based on one specific algorithm.
 The TSclust package [@TSclust] is a wrapper package, which imports and makes accessible functionality from the pdc package together with various other clustering approaches, which is very useful from a users' perspective; however, we noticed that researchers cite TSclust instead of pdc, which makes citation-based metrics less valid.
 
+## ID 6: Date of most recent substantive update
+
+Both ID 5 and 6 are difficult to ascertain because it is not always clear when updates are considered 'substantive.' or software 'fully functional'.
+We appreciate the importance of assessing maintenance as part of rigor.
+To assess this, we propose to provide a checkbox in which the author indicates whether a scientific software package is actively maintained (e.g., the software has a regular release cycle or an update within the last six months).
+In addition, authors have a chance to explain why their active maintenance may be different from these guidelines.
 
 ## ID 14: Lines of Code
 
