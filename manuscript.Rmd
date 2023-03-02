@@ -48,7 +48,7 @@ correspondence: |
 #abstract: |
 #  TBD 
   
-keywords          : "research software, open science, metrics, rigour, impact"
+keywords          : "research software, open science, metrics, rigor, impact"
 wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
 
 bibliography      : "r-references.bib"
@@ -88,18 +88,18 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 # Introduction
 
-Based on four principles of a more responsible research assessment in academic hiring and promotion processes [@schonbrodt2022responsible], @gartner2022responsible suggested a concrete evaluation scheme for published manuscripts, reusable datasets, and research software.
+Based on four principles of a more responsible research assessment in academic hiring and promotion processes [@schonbrodt2022responsible], @gartner2022responsible suggested a concrete evaluation scheme for published manuscripts, reusable data sets, and research software.
 We strongly support the increased emphasis on research software as a creditable and commendable scientific contribution.
 Why are research software contributions important scientific contributions?
 We would like to respond with a quote from the Science Code Manifesto [@manifesto]:
 "Software is a cornerstone of science. Without software, twenty-first century science would be impossible."
 and
 "Software is an essential research product, and the effort to produce, maintain, adapt, and curate code must be recognized."
-However, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivise software development and, specifically, good software engineering practice [@baxter2012research].
-In line with principle 3 of @schonbrodt2022responsible, we suggest that criteria for research software contributions must capture two major dimensions: rigour and impact.
+However, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivize software development and, specifically, good software engineering practice [@baxter2012research].
+In line with principle 3 of @schonbrodt2022responsible, we suggest that criteria for research software contributions must capture two major dimensions: rigor and impact.
 Impact measures whether the scholarly effort, implementation, and dissemination actually had a visible effect on the field.
-rigour means implementing high standards and best practices for ensuring transparency, correctness, and reusability of a piece of software.
-By setting a high bar of rigour in research software assessment in academic hiring and promotion, we hope to foster the creation of better software and, thus, better science.
+rigor means implementing high standards and best practices for ensuring transparency, correctness, and re-usability of a piece of software.
+By setting a high bar of rigor in research software assessment in academic hiring and promotion, we hope to foster the creation of better software and, thus, better science.
 From this perspective, we comment on some indicators of the proposed evaluation scheme for research software contributions (Table 3 of @gartner2022responsible).
 
 # Proposed Criteria
@@ -127,8 +127,8 @@ The `TSclust` package [@TSclust] is a wrapper package, which imports and makes a
 ## ID 6: Date of most recent substantive update
 
 Both ID 5 and 6 are difficult to ascertain because it is not always clear when updates are considered 'substantive' or software 'fully functional'.
-We appreciate the importance of assessing maintenance as part of rigour.
-To assess this, we propose to provide a simple checkbox, in which the author indicates whether a scientific software package is actively maintained (e.g., the software has a regular release cycle or an update within the last six months).
+We appreciate the importance of assessing maintenance as part of rigor.
+To assess this, we propose to provide a simple check box, in which the author indicates whether a scientific software package is actively maintained (e.g., the software has a regular release cycle or an update within the last six months).
 In addition, authors have a chance to explain why their active maintenance may be different from these guidelines.
 
 ## ID 14: Lines of Code
@@ -140,32 +140,32 @@ On the contrary, a feature of good software is modularity because it enables reu
 
 ## ID 7: Contributor Roles and Involvement
 
-We support the standardised assessment of project contributor roles, similar to the Contributor Roles Taxonomy (CRediT; https://credit.niso.org). 
+We support the standardized assessment of project contributor roles, similar to the Contributor Roles Taxonomy (CRediT; https://credit.niso.org). 
 However, we like to point out that the current evaluation schemes yields lower scores for the same effort of the individual researcher if they are part of a larger software project.
 
 ## ID 8: License
 
-At present, whether a piece of software is open source is not evaluated in the prescreening phase.
-However, an open license is central for assessing both rigour and (potential) impact, and should be part of the phase I assessment.
+At present, whether a piece of software is open source is not evaluated in the pre-screening phase.
+However, an open license is central for assessing both rigor and (potential) impact, and should be part of the phase I assessment.
 Above, we already discussed the different ways research software can have an impact --- not only by direct usage, but also by reusing software in other packages.
 Open-source software makes broader impact more likely and is a prerequisite for full transparency and reproducibility [@peikert2021reproducible].
-In addition, many aspects of rigour are impossible to evaluate for closed-source software --- for example, whether it is well-tested or bugs have been fixed.
+In addition, many aspects of rigor are impossible to evaluate for closed-source software --- for example, whether it is well-tested or bugs have been fixed.
 Therefore, we propose to penalize software if it does not adhere to an open-source license (those approved in a review process by the Open Source Initiative (https://opensource.org/licenses) by allowing them only half of the total achievable points.
 
 ## ID 17: Reusability Indicator
 
-This is one of only two criteria used in the prescreening phase of the proposal and therefore is of central importance.
-It is also important because it assesses aspects of rigour in software development: documentation, active maintenance, and testing.
-However, by incorporating the size of the user base, it confounds *usablity* (as an aspect of rigour) with *usage* (as an aspect of impact).
+This is one of only two criteria used in the pre-screening phase of the proposal and therefore is of central importance.
+It is also important because it assesses aspects of rigor in software development: documentation, active maintenance, and testing.
+However, by incorporating the size of the user base, it confounds *usability* (as an aspect of rigor) with *usage* (as an aspect of impact).
 In addition, the criteria for the different proposed categories are not clearly defined.
 For example, the difference between "fairly extensive" and "extensive" documentation is unclear.
 As a result, this indicator is more of a "gut-feeling" indicator, roughly assessing the "size" of the software project.
-Instead, in the following we propose to assess rigour and impact independently as primary aspects of a software contribution.
+Instead, in the following we propose to assess rigor and impact independently as primary aspects of a software contribution.
 
-# rigour for software implementations
+# rigor for software implementations
 
 <!--In the following, we discuss aspects that we believe should be scored in phase one of the assessment.-->
-We propose to use the following aspects as equally weighted indicators of rigour instead of the proposed broader reusability indicator (item 17 in Table 3 of the proposal).
+We propose to use the following aspects as equally weighted indicators of rigor instead of the proposed broader re-usability indicator (item 17 in Table 3 of the proposal).
 <!-- some introductory text missing -->
 <!-- maybe cite
 https://joss.readthedocs.io/en/latest/review_criteria.html
@@ -176,7 +176,7 @@ here -->
 ## Tests
 
 Tests are essential to discover incorrect functionality, investigate code scalability and reveal poor design choices.
-There are a variety of useful tests, such as unit tests of subcomponents or tests of software functionality at a larger scale [e.g., see the testthat package in R, @wickham2011].
+There are a variety of useful tests, such as unit tests of sub components or tests of software functionality at a larger scale [e.g., see the testthat package in R, @wickham2011].
 It is possible to quantify aspects of software testing, for example, by assessing code coverage, defined as the percentage of code lines executed during testing.
 However, we believe that we should give points for software that promises that major functionality is covered by tests.
 Those tests should be automated or at least open-source and reproducible.
@@ -185,7 +185,7 @@ Those tests should be automated or at least open-source and reproducible.
 
 Just like for tests, there are different types of documentation.
 For example, tutorials showcase software usage with examples, and there is application programming interface (API) documentation for individual functions and classes to enable reusing functions in other software packages.
-We propose to identify relevant categories of documentation for research software, e.g., installation instructions, tutorials, API, and community guidelines <!-- Cite JOSS!-->, and score the presence of each of them separately.
+We propose to identify relevant categories of documentation for research software, e.g., installation instructions, tutorials, API, and community guidelines (also see https://joss.readthedocs.io/en/latest/review_checklist.html), and score the presence of each of them separately.
 
 ## Maintenance
 
@@ -205,9 +205,9 @@ We believe this to be a fair assessment of the actual impact the specific contri
 # Summary
 
 In sum, we are thankful to @gartner2022responsible for highlighting the importance of research software contributions as scientifically valuable products.
-We believe the current proposal should aim to better reflect the distinction between rigour and impact for software, similar to the guidelines proposed to evaluate journal articles.
-To this end, we suggest a more fine-grained assessment of rigour, and put emphasis on the merit statement, in which software authors should argue in how far their project impacted other scientific endeavours.
-Last, we hope to arrive at an evaluation scheme that incentivises the development of scientific open-source software.
+We believe the current proposal should aim to better reflect the distinction between rigor and impact for software, similar to the guidelines proposed to evaluate journal articles.
+To this end, we suggest a more fine-grained assessment of rigor, and put emphasis on the merit statement, in which software authors should argue in how far their project impacted other scientific endeavors.
+Last, we hope to arrive at an evaluation scheme that incentivizes the development of scientific open-source software.
 
 \newpage
 
