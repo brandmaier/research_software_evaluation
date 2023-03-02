@@ -9,5 +9,10 @@ RUN MRAN=https://mran.microsoft.com/snapshot/${BUILD_DATE} \
   && echo MRAN=$MRAN >> /etc/environment \
   && export MRAN=$MRAN \
   && echo "options(repos = c(CRAN='$MRAN'), download.file.method = 'libcurl')" >> /usr/local/lib/R/etc/Rprofile.site
+RUN tlmgr install apa6 threeparttable endfloat was multirow threeparttablex environ xpatch csquotes
 RUN install2.r --error --skipinstalled \ 
+  here \ 
   papaja
+RUN installGithub.r \ 
+  aaronpeikert/repro@5075336 \ 
+  benmarwick/wordcountaddin@e075baa

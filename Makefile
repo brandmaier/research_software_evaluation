@@ -13,9 +13,15 @@ RUN2 = $(QRUN2)
 ### Rmd's ###
 include .repro/Makefile_Rmds
 
+manuscript.pdf: manuscript.tex
+
 publish/: manuscript.pdf
 
 include .repro/Makefile_publish
+
+publish/PR%/: manuscript.pdf
+	mkdir -p $@
+	cp -r $^ $@
 
 ### Docker ###
 # this is a workaround for windows users
