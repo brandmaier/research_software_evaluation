@@ -88,10 +88,10 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 # Introduction
 
-Based on four principles of a more responsible research assessment in academic hiring and promotion processes [@schonbrodt2022responsible], @gartner2022responsible suggested a specific evaluation scheme for published manuscripts, reusable datasets, and research software.
-We specifically endorse the increased emphasis on research software as a recognizable and laudable scientific contribution.
+Based on four principles of a more responsible research assessment in academic hiring and promotion processes [@schonbrodt2022responsible], @gartner2022responsible suggested a concrete evaluation scheme for published manuscripts, reusable datasets, and research software.
+We strongly support the increased emphasis on research software as a creditable and commendable scientific contribution.
 Why are research software contributions important scientific contributions?
-We would like to respond with a quote from the Science Code Manifesto (http://sciencecodemanifesto.org/):
+We would like to respond with a quote from the Science Code Manifesto [@manifesto]:
 "Software is a cornerstone of science. Without software, twenty-first century science would be impossible."
 and
 "Software is an essential research product, and the effort to produce, maintain, adapt, and curate code must be recognized."
