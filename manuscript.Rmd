@@ -179,7 +179,7 @@ here -->
 ## Tests
 
 Tests are essential to discover incorrect functionality, investigate code scalability and reveal poor design choices.
-There are a variety of useful tests, such as unit tests of sub components or tests of software functionality at a larger scale [e.g., see the testthat package in R, @wickham2011].
+There are a variety of useful tests, such as unit tests of sub components or tests of software functionality at a larger scale [e.g., see the `testthat` package in R, @wickham2011].
 It is possible to quantify aspects of software testing, for example, by assessing code coverage, defined as the percentage of code lines executed during testing.
 However, we believe that we should give points for software that promises that major functionality is covered by tests.
 Those tests should be automated or at least open-source and reproducible.
