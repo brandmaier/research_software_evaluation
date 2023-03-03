@@ -98,13 +98,13 @@ and
 However, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivize software development and, specifically, good software engineering practice [@baxter2012research].
 In line with principle 3 of @schonbrodt2022responsible, we suggest that criteria for research software contributions must capture two major dimensions: rigor and impact.
 Impact measures whether the scholarly effort, implementation, and dissemination actually had a visible effect on the field.
-rigor means implementing high standards and best practices for ensuring transparency, correctness, and re-usability of a piece of software.
+Rigor means implementing high standards and best practices for ensuring transparency, correctness, and re-usability of a piece of software.
 By setting a high bar of rigor in research software assessment in academic hiring and promotion, we hope to foster the creation of better software and, thus, better science.
 From this perspective, we comment on some indicators of the proposed evaluation scheme for research software contributions (Table 3 of @gartner2022responsible).
 
 # Proposed Criteria
 
-## ID 5: Date of first fully functional public version/ID 9: Citations
+## ID 9: Citations/ID 5: Date of first fully functional public version
 
 Computing the citations in relation to age of software seems to be inconsistent with the proposal of @schonbrodt2022responsible, who reminded us that a core principle of the implementation of DORA is to "abandon the use of invalid quantitative metrics of research quality and productivity in hiring and promotion" (p.2).
 It is unclear why a citation-based metric for software would be more valid than the equivalent for articles.
@@ -127,8 +127,7 @@ The `TSclust` package [@TSclust] is a wrapper package, which imports and makes a
 ## ID 6: Date of most recent substantive update
 
 Both ID 5 and 6 are difficult to ascertain because it is not always clear when updates are considered 'substantive' or software 'fully functional'.
-We appreciate the importance of assessing maintenance as part of rigor.
-To assess this, we propose to provide a simple check box, in which the author indicates whether a scientific software package is actively maintained (e.g., the software has a regular release cycle or an update within the last six months).
+To assess active maintenance as an aspect of rigor, we propose to provide a simple checkbox, in which the author indicates whether a scientific software package is actively maintained (e.g., the software has a regular release cycle or an update within the last six months).
 In addition, authors have a chance to explain why their active maintenance may be different from these guidelines.
 
 ## ID 14: Lines of Code
@@ -152,6 +151,7 @@ Open-source software makes broader impact more likely and is a prerequisite for 
 In addition, many aspects of rigor are impossible to evaluate for closed-source software --- for example, whether it is well-tested or bugs have been fixed.
 Therefore, we propose to penalize software if it does not adhere to an open-source license (those approved in a review process by the Open Source Initiative (https://opensource.org/licenses) by allowing them only half of the total achievable points.
 
+
 ## ID 17: Reusability Indicator
 
 This is one of only two criteria used in the pre-screening phase of the proposal and therefore is of central importance.
@@ -162,7 +162,8 @@ For example, the difference between "fairly extensive" and "extensive" documenta
 As a result, this indicator is more of a "gut-feeling" indicator, roughly assessing the "size" of the software project.
 Instead, in the following we propose to assess rigor and impact independently as primary aspects of a software contribution.
 
-# rigor for software implementations
+
+# Assessing Rigor
 
 <!--In the following, we discuss aspects that we believe should be scored in phase one of the assessment.-->
 We propose to use the following aspects as equally weighted indicators of rigor instead of the proposed broader re-usability indicator (item 17 in Table 3 of the proposal).
@@ -198,7 +199,7 @@ We propose to score two aspects of maintenance separately, maintaining the code 
 Total citation metrics, number of users, downloads per month, GitHub stars and similar may provide a coarse measure for the impact of a software package, even though it is important to note the shortcomings we described above.
 
 We believe that the suggested merit statement is most useful to assess impact of research software and that this should be the primary statement for committee members to evaluate if they are less concerned with the technical aspects of research software development.
-In our view, researchers should be requested to indicate at least one (and up to three)  research projects that directly benefited from their software contributions.
+In our view, researchers should be requested to indicate at least one (and up to three) research projects that directly benefited from their software contributions.
 We believe this to be a fair assessment of the actual impact the specific contribution of the individual researcher had.
 
 
