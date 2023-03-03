@@ -99,9 +99,9 @@ Based on four principles of a more responsible research assessment in academic h
 We strongly support the increased emphasis on research software as a creditable and commendable scientific contribution.
 Why are research software contributions important scientific contributions?
 We would like to respond with a quote from the Science Code Manifesto [@manifesto]:
-"Software is a cornerstone of science. Without software, twenty-first century science would be impossible."
+"Software is a cornerstone of science. Without software, twenty-first century science would be impossible"
 and
-"Software is an essential research product, and the effort to produce, maintain, adapt, and curate code must be recognized."
+"software is an essential research product, and the effort to produce, maintain, adapt, and curate code must be recognized."
 However, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivize software development and, specifically, good software engineering practice [@baxter2012research].
 In line with principle 3 of @schonbrodt2022responsible, we suggest that criteria for research software contributions must capture two major dimensions: rigor and impact.
 Impact measures whether the scholarly effort, implementation, and dissemination actually had a visible effect on the field.
