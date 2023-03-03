@@ -107,34 +107,29 @@ In line with principle 3 of @schonbrodt2022responsible, we suggest that criteria
 Impact measures whether the scholarly effort, implementation, and dissemination actually had a visible effect on the field.
 Rigor means implementing high standards and best practices for ensuring transparency, correctness, and re-usability of a piece of software.
 By setting a high bar of rigor in research software assessment in academic hiring and promotion, we hope to foster the creation of better software and, thus, better science.
-From this perspective, we comment on some indicators of the proposed evaluation scheme for research software contributions (Table 3 of @gartner2022responsible).
+From this perspective, we comment on some indicators of the proposed evaluation scheme for research software contributions [Table 3 of @gartner2022responsible].
 
 # Proposed Criteria
 
-## ID 9: Citations/ID 5: Date of first fully functional public version
+## ID 9: Citations and ID 5: Date of first fully functional public version
 
-Computing the citations in relation to age of software seems to be inconsistent with the proposal of @schonbrodt2022responsible, who reminded us that a core principle of the implementation of DORA is to "abandon the use of invalid quantitative metrics of research quality and productivity in hiring and promotion" (p.2).
+Considering citations in relation to age of software seems to be inconsistent with the proposal of @schonbrodt2022responsible, who reminded us that a core principle of the implementation of DORA is to "abandon the use of invalid quantitative metrics of research quality and productivity in hiring and promotion" (p.2).
 It is unclear why a citation-based metric for software would be more valid than the equivalent for articles.
-In fact, there are several additional shortcomings in relation to software.
-We discuss shortcomings of the numerator (number of citations) here and the issues of the denominator (software age) in the next section.
-
-
-Citations suffer from serious shortcomings when used to evaluate the impact of research software, particularly when used comparatively in the context of hiring and promotion.
+In fact, citations suffer from additional shortcomings when used to evaluate the impact of research software, particularly when used comparatively in the context of hiring and promotion.
 For example, citing data analysis packages is much more commonly accepted than citing supporting packages [such as papaja, @R-papaja, used to render this article].
-
 Further, functionality of successful, modular scientific software is ideally reused in other software packages to avoid code duplication and enable faster development of new software.
 While we highly encourage reuse from both a software engineering perspective and for scientific progress, it challenges the validity of citation-based metrics for impact.
 For example, consider the `NLopt` optimization suite, which counts 1,711 citations on Google scholar at the time of writing.
 `NLopt` is a backbone for many scientific packages both because it implements various optimization algorithms but also because it is open-source and can inspire re-implementations of these algorithms.
-One such example is the famous `lme4` package [@bates2014fitting] for generalized linear mixed-effects models, that is partly based on `NLopt`.
+One such example is the famous `lme4` package [@bates2014fitting] for generalized linear mixed-effects models, which is partly based on `NLopt`.
 `lme4` has more than 58,000 citations on Google scholar, yet it is unlikely that researchers will cite the underlying optimization algorithm.
 For another example, the `pdc` package [@pdc-paper] offers functions to cluster time series based on one specific algorithm.
-The `TSclust` package [@TSclust] is a wrapper package, which imports and makes accessible functionality from the `pdc` package as well as various other clustering approaches, which is very useful from a users' perspective; however, we noticed that researchers now cite `TSclust` instead of `pdc`, which challenges the citation-based assessment of impact.
+The `TSclust` package [@TSclust] is a wrapper package, which imports and makes accessible functionality from the `pdc` package as well as various other clustering approaches, which is very useful from a users' perspective; however, we noticed that researchers now cite `TSclust` instead of `pdc`.
 
 ## ID 6: Date of most recent substantive update
 
 Both ID 5 and 6 are difficult to ascertain because it is not always clear when updates are considered 'substantive' or software 'fully functional'.
-To assess active maintenance as an aspect of rigor, we propose to provide a simple checkbox, in which the author indicates whether a scientific software package is actively maintained (e.g., the software has a regular release cycle or an update within the last six months).
+To assess active maintenance as an aspect of rigor, we propose to provide a simple check box, in which the author indicates whether a scientific software package is actively maintained (e.g., the software has a regular release cycle or an update within the last six months).
 In addition, authors have a chance to explain why their active maintenance may be different from these guidelines.
 
 ## ID 14: Lines of Code
@@ -147,7 +142,7 @@ On the contrary, a feature of good software is modularity because it enables reu
 ## ID 7: Contributor Roles and Involvement
 
 We support the standardized assessment of project contributor roles, similar to the Contributor Roles Taxonomy (CRediT; https://credit.niso.org). 
-However, we like to point out that the current evaluation schemes yields lower scores for the same effort of the individual researcher if they are part of a larger software project.
+However, we like to point out that the current evaluation schemes yields different scores for the same effort of the individual researcher depending on the size of the software project.
 
 ## ID 8: License
 
