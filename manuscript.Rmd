@@ -1,7 +1,7 @@
 ---
 title             : "Assessing rigor and impact of research software for hiring and promotion in psychology"
 #subtitle          : "Commentary: 'Responsible Research Assessment II: A specific proposal for hiring and promotion in psychology'"
-shorttitle        : "Rigor and impact"
+shorttitle        : "Assessing research software"
 
 author: 
   - name          : "Andreas M. Brandmaier"
