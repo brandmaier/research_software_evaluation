@@ -151,7 +151,7 @@ Above, we already discussed the different ways research software can have an imp
 Open-source software makes broader impact more likely and is a prerequisite for full transparency and reproducibility [@peikert2021reproducible].
 In addition, many aspects of rigor are impossible to evaluate for closed-source software --- for example, whether it is well-tested or bugs have been fixed.
 Giving more weight to open licenses aligns well with the original article's emphasis on open science.
-Therefore, we propose to penalize software if it does not adhere to an open-source license (those approved in a review process by the Open Source Initiative (https://opensource.org/licenses), for example, by allowing them only half of the total achievable points.
+Therefore, we propose to penalize software if it does not adhere to an open-source license (those approved in a review process by the [Open Source Initiative](https://opensource.org/licenses)), for example, by allowing them only half of the total achievable points.
 
 
 ## ID 17: Reusability Indicator
