@@ -1,7 +1,7 @@
 ---
-title             : "Assessing rigor and impact in research software"
+title             : "Assessing rigor and impact of research software for hiring and promotion in psychology"
 #subtitle          : "Commentary: 'Responsible Research Assessment II: A specific proposal for hiring and promotion in psychology'"
-shorttitle        : "Rigor and impact"
+shorttitle        : "Assessing research software"
 
 author: 
   - name          : "Andreas M. Brandmaier"
@@ -150,7 +150,7 @@ Above, we already discussed the different ways research software can have an imp
 Open-source software makes broader impact more likely and is a prerequisite for full transparency and reproducibility [@peikert2021reproducible].
 In addition, many aspects of rigor are impossible to evaluate for closed-source software --- for example, whether it is well-tested or bugs have been fixed.
 Giving more weight to open licenses aligns well with the original article's emphasis on open science.
-Therefore, we propose to penalize software if it does not adhere to an open-source license (those approved in a review process by the Open Source Initiative (https://opensource.org/licenses), for example, by allowing them only half of the total achievable points.
+Therefore, we propose to penalize software if it does not adhere to an open-source license (those approved in a review process by the [Open Source Initiative](https://opensource.org/licenses)), for example, by allowing them only half of the total achievable points.
 
 
 ## ID 17: Reusability Indicator
@@ -211,7 +211,8 @@ In sum, we are thankful to @gartner2022responsible for highlighting the importan
 We believe the current proposal should aim to better reflect the distinction between rigor and impact for software, similar to the guidelines proposed to evaluate journal articles.
 To this end, we suggest a more fine-grained assessment of rigor, and put emphasis on the merit statement, in which software authors should argue in how far their project impacted other scientific endeavors.
 Last, we hope to arrive at an evaluation scheme that incentivizes the development of scientific open-source software.
-Note that the requirements of a given academic position should guide the weighting of research software when evaluating and selecting candidates. In some cases, research software development may be central to a position and therefore a requirement (such as when hiring professors of statistics or research methods), but in other cases, we hope that research software development activities at least are considered as research output comparable to published papers.
+Note that the requirements of a given academic position should guide the weighting of research software when evaluating and selecting candidates.
+In some cases, research software development may be central to a position and, therefore, a requirement (such as when hiring professors of statistics or research methods), but in other cases, we hope that research software development activities at least are considered as research output comparable to published papers.
 
 \newpage
 
