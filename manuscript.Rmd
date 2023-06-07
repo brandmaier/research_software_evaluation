@@ -1,6 +1,7 @@
 ---
-title             : "Commentary: 'Responsible Research Assessment II: A specific proposal for hiring and promotion in psychology'"
-shorttitle        : "Responsible research assessment"
+title             : "Assessing rigor and impact of research software for hiring and promotion in psychology"
+#subtitle          : "Commentary: 'Responsible Research Assessment II: A specific proposal for hiring and promotion in psychology'"
+shorttitle        : "Assessing research software"
 
 author: 
   - name          : "Andreas M. Brandmaier"
@@ -31,8 +32,6 @@ note: |
   Gärtner, A., Leising, D., & Schönbrodt, F. D. (2022, November 25). Responsible Research Assessment II: A specific proposal for hiring and promotion in psychology. https://doi.org/10.31234/osf.io/5yexm
   
   
-  
-  
   Submitted to Meta-Psychology. 
   
   Participate in open peer review by commenting through hypothes.is directly on this preprint. The full editorial process of all articles under review at Meta-Psychology can be found following this link: https://tinyurl.com/mp-submissions. You will find this preprint by searching for the first author’s name.
@@ -52,8 +51,7 @@ affiliation:
 correspondence: |
   brandmaier@mpib-berlin.mpg.de
 
-#abstract: |
-#  TBD 
+abstract: Based on four principles of a more responsible research assessment in academic hiring and promotion processes, @gartner2022responsible suggested an evaluation scheme for published manuscripts, reusable data sets, and research software. This commentary responds to the proposed indicators for the evaluation of research software contributions in academic hiring and promotion processes. Acknowledging the significance of research software as a critical component of modern science, we propose that an evaluation scheme must emphasize the two major dimensions of rigor and impact. Generally, we believe that research software should be recognized as valuable scientific output in academic hiring and promotion, with the hope that this incentivizes the development of more open and better research software.
   
 keywords          : "research software, open science, metrics, rigor, impact"
 wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
@@ -146,12 +144,13 @@ However, we like to point out that the current evaluation schemes yields differe
 
 ## ID 8: License
 
-At present, whether a piece of software is open source is not evaluated in the pre-screening phase.
+At present, whether a piece of software is open source is not evaluated at the pre-screening stage.
 However, an open license is central for assessing both rigor and (potential) impact, and should be part of the phase I assessment.
 Above, we already discussed the different ways research software can have an impact --- not only by direct usage, but also by reusing software in other packages.
 Open-source software makes broader impact more likely and is a prerequisite for full transparency and reproducibility [@peikert2021reproducible].
 In addition, many aspects of rigor are impossible to evaluate for closed-source software --- for example, whether it is well-tested or bugs have been fixed.
-Therefore, we propose to penalize software if it does not adhere to an open-source license (those approved in a review process by the Open Source Initiative (https://opensource.org/licenses) by allowing them only half of the total achievable points.
+Giving more weight to open licenses aligns well with the original article's emphasis on open science.
+Therefore, we propose to penalize software if it does not adhere to an open-source license (those approved in a review process by the [Open Source Initiative](https://opensource.org/licenses)), for example, by allowing them only half of the total achievable points.
 
 
 ## ID 17: Reusability Indicator
@@ -202,6 +201,7 @@ Total citation metrics, number of users, downloads per month, GitHub stars and s
 
 We believe that the suggested merit statement is most useful to assess impact of research software and that this should be the primary statement for committee members to evaluate if they are less concerned with the technical aspects of research software development.
 In our view, researchers should be requested to indicate at least one (and up to three) research projects that directly benefited from their software contributions.
+In case of recently published research software, the merit statement can be used alternatively to describe expected benefits to the field or potential use-cases of the software.
 We believe this to be a fair assessment of the actual impact the specific contribution of the individual researcher had.
 
 
@@ -211,6 +211,8 @@ In sum, we are thankful to @gartner2022responsible for highlighting the importan
 We believe the current proposal should aim to better reflect the distinction between rigor and impact for software, similar to the guidelines proposed to evaluate journal articles.
 To this end, we suggest a more fine-grained assessment of rigor, and put emphasis on the merit statement, in which software authors should argue in how far their project impacted other scientific endeavors.
 Last, we hope to arrive at an evaluation scheme that incentivizes the development of scientific open-source software.
+Note that the requirements of a given academic position should guide the weighting of research software when evaluating and selecting candidates.
+In some cases, research software development may be central to a position and, therefore, a requirement (such as when hiring professors of statistics or research methods), but in other cases, we hope that research software development activities at least are considered as research output comparable to published papers.
 
 \newpage
 
