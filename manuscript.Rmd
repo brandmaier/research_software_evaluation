@@ -51,8 +51,7 @@ affiliation:
 correspondence: |
   brandmaier@mpib-berlin.mpg.de
 
-#abstract: |
-#  TBD 
+abstract: Based on four principles of a more responsible research assessment in academic hiring and promotion processes, @gartner2022responsible suggested an evaluation scheme for published manuscripts, reusable data sets, and research software. This commentary responds to the proposed indicators for the evaluation of research software contributions in academic hiring and promotion processes. Acknowledging the significance of research software as a critical component of modern science, we propose that an evaluation scheme must emphasize the two major dimensions of rigor and impact. Generally, we believe that research software should be recognized as valuable scientific output in academic hiring and promotion, with the hope that this incentivizes the development of more open and better research software.
   
 keywords          : "research software, open science, metrics, rigor, impact"
 wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
