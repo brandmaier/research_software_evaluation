@@ -1,5 +1,5 @@
 ---
-title             : "Assessing rigor and impact of research software for hiring and promotion in psychology"
+title             : "Assessing rigor and impact of research software for hiring and promotion in psychology: A comment on Gärtner et al. (2022)"
 #subtitle          : "Commentary: 'Responsible Research Assessment II: A specific proposal for hiring and promotion in psychology'"
 shorttitle        : "Assessing research software"
 
@@ -40,13 +40,13 @@ note: |
   
 affiliation:
   - id            : "1"
-    institution   : "MSB Medical School Berlin"
+    institution   : "Department of Psychology, MSB Medical School Berlin, Berlin, Germany"
   - id            : "2"
-    institution   : "Max Planck Institute for Human Development"
+    institution   : "Center for Lifespan Psychology, Max Planck Institute for Human Development, Berlin, Germany"
   - id            : "3"
-    institution   : "Max Planck UCL Centre for Computational Psychiatry and Ageing Research"
+    institution   : "Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany"
   - id            : "4"
-    institution   : "Humboldt-Universität zu Berlin"
+    institution   : "Department of Psychology, Humboldt-Universität zu Berlin, Berlin, Germany"
     
 correspondence: |
   brandmaier@mpib-berlin.mpg.de
