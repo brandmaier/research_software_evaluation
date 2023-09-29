@@ -1,0 +1,386 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  man]{apa6}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{english}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+% Manuscript styling
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
+
+% Table formatting
+\usepackage{longtable}
+\usepackage{lscape}
+% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
+\usepackage{multirow}		% Table styling
+\usepackage{tabularx}		% Control Column width
+\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
+\usepackage{threeparttablex}            % Lets threeparttable work with longtable
+
+% Create new environments so endfloat can handle them
+% \newenvironment{ltable}
+%   {\begin{landscape}\centering\begin{threeparttable}}
+%   {\end{threeparttable}\end{landscape}}
+\newenvironment{lltable}{\begin{landscape}\centering\begin{ThreePartTable}}{\end{ThreePartTable}\end{landscape}}
+
+% Enables adjusting longtable caption width to table width
+% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+
+% \setlength{\parindent}{0.5in}
+% \setlength{\parskip}{0pt plus 0pt minus 0pt}
+
+% Overwrite redefinition of paragraph and subparagraph by the default LaTeX template
+% See https://github.com/crsh/papaja/issues/292
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+  {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries\itshape\typesectitle}}
+
+\renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{1em}%
+  {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+  {-\z@\relax}%
+  {\normalfont\normalsize\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+\makeatother
+
+% \usepackage{etoolbox}
+\makeatletter
+\patchcmd{\HyOrg@maketitle}
+  {\section{\normalfont\normalsize\abstractname}}
+  {\section*{\normalfont\normalsize\abstractname}}
+  {}{\typeout{Failed to patch abstract.}}
+\patchcmd{\HyOrg@maketitle}
+  {\section{\protect\normalfont{\@title}}}
+  {\section*{\protect\normalfont{\@title}}}
+  {}{\typeout{Failed to patch title.}}
+\makeatother
+
+\usepackage{xpatch}
+\makeatletter
+\xapptocmd\appendix
+  {\xapptocmd\section
+    {\addcontentsline{toc}{section}{\appendixname\ifoneappendix\else~\theappendix\fi\\: #1}}
+    {}{\InnerPatchFailed}%
+  }
+{}{\PatchFailed}
+\keywords{research software, open science, metrics, rigor, impact\newline\indent Word count: 1685}
+\DeclareDelayedFloatFlavor{ThreePartTable}{table}
+\DeclareDelayedFloatFlavor{lltable}{table}
+\DeclareDelayedFloatFlavor*{longtable}{table}
+\makeatletter
+\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
+\makeatother
+\usepackage{csquotes}
+\usepackage{hyperref}
+
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Assessing rigor and impact of research software for hiring and promotion in psychology: A comment on Gärtner et al.~(2022)},
+  pdfauthor={Andreas M. Brandmaier1,2,3, Maximilian Ernst2,4, \& Aaron Peikert2,3,4},
+  pdflang={en-EN},
+  pdfkeywords={research software, open science, metrics, rigor, impact},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Assessing rigor and impact of research software for hiring and promotion in psychology: A comment on Gärtner et al.~(2022)}
+\author{Andreas M. Brandmaier\textsuperscript{1,2,3}, Maximilian Ernst\textsuperscript{2,4}, \& Aaron Peikert\textsuperscript{2,3,4}}
+\date{}
+
+
+\shorttitle{Assessing research software}
+
+\authornote{
+
+The authors made the following contributions. Andreas M. Brandmaier: Conceptualization, Writing - Original Draft Preparation, Writing - Review \& Editing, Supervision; Maximilian Ernst: Conceptualization, Writing - Original Draft Preparation, Writing - Review \& Editing; Aaron Peikert: Conceptualization, Writing - Original Draft Preparation, Writing - Review \& Editing.
+
+Correspondence concerning this article should be addressed to Andreas M. Brandmaier, Rüdesheimer Str. 50, 14197 Berlin. E-mail: \href{mailto:andreas.brandmaier@medicalschool-berlin.de}{\nolinkurl{andreas.brandmaier@medicalschool-berlin.de}}
+
+}
+
+\affiliation{\vspace{0.5cm}\textsuperscript{1} Department of Psychology, MSB Medical School Berlin, Berlin, Germany\\\textsuperscript{2} Center for Lifespan Psychology, Max Planck Institute for Human Development, Berlin, Germany\\\textsuperscript{3} Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany\\\textsuperscript{4} Department of Psychology, Humboldt-Universität zu Berlin, Berlin, Germany}
+
+\note{
+
+A commentary on:
+Gärtner, A., Leising, D., \& Schönbrodt, F. D. (2022, November 25). Responsible Research Assessment II: A specific proposal for hiring and promotion in psychology. \url{https://doi.org/10.31234/osf.io/5yexm}
+
+Submitted to Meta-Psychology.
+
+Participate in open peer review by commenting through hypothes.is directly on this preprint. The full editorial process of all articles under review at Meta-Psychology can be found following this link: \url{https://tinyurl.com/mp-submissions}. You will find this preprint by searching for the first author's name.
+
+}
+
+\abstract{%
+Based on four principles of a more responsible research assessment in academic hiring and promotion processes, Gärtner, Leising, and Schönbrodt (2022) suggested an evaluation scheme for published manuscripts, reusable data sets, and research software. This commentary responds to the proposed indicators for the evaluation of research software contributions in academic hiring and promotion processes. Acknowledging the significance of research software as a critical component of modern science, we propose that an evaluation scheme must emphasize the two major dimensions of rigor and impact. Generally, we believe that research software should be recognized as valuable scientific output in academic hiring and promotion, with the hope that this incentivizes the development of more open and better research software.
+}
+
+
+
+\begin{document}
+\maketitle
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Based on four principles of a more responsible research assessment in academic hiring and promotion processes (Schönbrodt et al., 2022), Gärtner et al. (2022) suggested a concrete evaluation scheme for published manuscripts, reusable data sets, and research software.
+We strongly support the increased emphasis on research software as a creditable and commendable scientific contribution.
+Why are research software contributions important scientific contributions?
+We would like to respond with a quote from the Science Code Manifesto (Climate Code Foundation, 2011):
+``Software is a cornerstone of science. Without software, twenty-first century science would be impossible''
+and
+``software is an essential research product, and the effort to produce, maintain, adapt, and curate code must be recognized.''
+However, despite the heavy reliance on computational infrastructure, the current academic infrastructure does not adequately incentivize software development and, specifically, good software engineering practice (Baxter, Hong, Gorissen, Hetherington, \& Todorov, 2012).
+In line with principle 3 of Schönbrodt et al. (2022), we suggest that criteria for research software contributions must capture two major dimensions: rigor and impact.
+Impact measures whether the scholarly effort, implementation, and dissemination actually had a visible effect on the field.
+Rigor means implementing high standards and best practices for ensuring transparency, correctness, and re-usability of a piece of software.
+By setting a high bar of rigor in research software assessment in academic hiring and promotion, we hope to foster the creation of better software and, thus, better science.
+From this perspective, we comment on some indicators of the proposed evaluation scheme for research software contributions (Table 3 of Gärtner et al., 2022).
+
+\hypertarget{proposed-criteria}{%
+\section{Proposed Criteria}\label{proposed-criteria}}
+
+\hypertarget{id-9-citations-and-id-5-date-of-first-fully-functional-public-version}{%
+\subsection{ID 9: Citations and ID 5: Date of first fully functional public version}\label{id-9-citations-and-id-5-date-of-first-fully-functional-public-version}}
+
+Considering citations in relation to age of software seems to be inconsistent with the proposal of Schönbrodt et al. (2022), who reminded us that a core principle of the implementation of DORA is to ``abandon the use of invalid quantitative metrics of research quality and productivity in hiring and promotion'' (p.2).
+It is unclear why a citation-based metric for software would be more valid than the equivalent for articles.
+In fact, citations suffer from additional shortcomings when used to evaluate the impact of research software, particularly when used comparatively in the context of hiring and promotion.
+For example, citing data analysis packages is much more commonly accepted than citing supporting packages (such as papaja, Aust \& Barth, 2022, used to render this article).
+Further, functionality of successful, modular scientific software is ideally reused in other software packages to avoid code duplication and enable faster development of new software.
+While we highly encourage reuse from both a software engineering perspective and for scientific progress, it challenges the validity of citation-based metrics for impact.
+For example, consider the \texttt{NLopt} optimization suite, which counts 1,711 citations on Google scholar at the time of writing.
+\texttt{NLopt} is a backbone for many scientific packages both because it implements various optimization algorithms but also because it is open-source and can inspire re-implementations of these algorithms.
+One such example is the famous \texttt{lme4} package (Bates, Mächler, Bolker, \& Walker, 2014) for generalized linear mixed-effects models, which is partly based on \texttt{NLopt}.
+\texttt{lme4} has more than 58,000 citations on Google scholar, yet it is unlikely that researchers will cite the underlying optimization algorithm.
+For another example, the \texttt{pdc} package (Brandmaier, 2015) offers functions to cluster time series based on one specific algorithm.
+The \texttt{TSclust} package (Montero \& Vilar, 2014) is a wrapper package, which imports and makes accessible functionality from the \texttt{pdc} package as well as various other clustering approaches, which is very useful from a users' perspective; however, we noticed that researchers now cite \texttt{TSclust} instead of \texttt{pdc}.
+
+\hypertarget{id-6-date-of-most-recent-substantive-update}{%
+\subsection{ID 6: Date of most recent substantive update}\label{id-6-date-of-most-recent-substantive-update}}
+
+Both ID 5 and 6 are difficult to ascertain because it is not always clear when updates are considered `substantive' or software `fully functional'.
+To assess active maintenance as an aspect of rigor, we propose to provide a simple check box, in which the author indicates whether a scientific software package is actively maintained (e.g., the software has a regular release cycle or an update within the last six months).
+In addition, authors have a chance to explain why their active maintenance may be different from these guidelines.
+
+\hypertarget{id-14-lines-of-code}{%
+\subsection{ID 14: Lines of Code}\label{id-14-lines-of-code}}
+
+We discourage the lines of code (LOC) metric to measure effort.
+LOC highly depends on programming language, mastery, and personal programming style.
+In particular, many LOC may simply mean that a researcher writes inefficient and repetitive code, one of the great sins of programming.
+On the contrary, a feature of good software is modularity because it enables reusing functions both inside and outside the project, resulting in fewer LOC.
+
+\hypertarget{id-7-contributor-roles-and-involvement}{%
+\subsection{ID 7: Contributor Roles and Involvement}\label{id-7-contributor-roles-and-involvement}}
+
+We support the standardized assessment of project contributor roles, similar to the Contributor Roles Taxonomy (CRediT; \url{https://credit.niso.org}).
+However, we like to point out that the current evaluation schemes yields different scores for the same effort of the individual researcher depending on the size of the software project.
+
+\hypertarget{id-8-license}{%
+\subsection{ID 8: License}\label{id-8-license}}
+
+At present, whether a piece of software is open source is not evaluated at the pre-screening stage.
+However, an open license is central for assessing both rigor and (potential) impact, and should be part of the phase I assessment.
+Above, we already discussed the different ways research software can have an impact --- not only by direct usage, but also by reusing software in other packages.
+Open-source software makes broader impact more likely and is a prerequisite for full transparency and reproducibility (Peikert, Van Lissa, \& Brandmaier, 2021).
+In addition, many aspects of rigor are impossible to evaluate for closed-source software --- for example, whether it is well-tested or bugs have been fixed.
+Giving more weight to open licenses aligns well with the original article's emphasis on open science.
+Therefore, we propose to penalize software if it does not adhere to an open-source license (those approved in a review process by the \href{https://opensource.org/licenses}{Open Source Initiative}), for example, by allowing them only half of the total achievable points.
+
+\hypertarget{id-17-reusability-indicator}{%
+\subsection{ID 17: Reusability Indicator}\label{id-17-reusability-indicator}}
+
+This is one of only two criteria used in the pre-screening phase of the proposal and therefore is of central importance.
+It is also important because it assesses aspects of rigor in software development: documentation, active maintenance, and testing.
+However, by incorporating the size of the user base, it confounds \emph{usability} (as an aspect of rigor) with \emph{usage} (as an aspect of impact).
+In addition, the criteria for the different proposed categories are not clearly defined.
+For example, the difference between ``fairly extensive'' and ``extensive'' documentation is unclear.
+As a result, this indicator is more of a ``gut-feeling'' indicator, roughly assessing the ``size'' of the software project.
+Instead, in the following we propose to assess rigor and impact independently as primary aspects of a software contribution.
+
+\hypertarget{assessing-rigor}{%
+\section{Assessing Rigor}\label{assessing-rigor}}
+
+We propose to use the following aspects as equally weighted indicators of rigor instead of the proposed broader re-usability indicator (item 17 in Table 3 of the proposal).
+
+\hypertarget{tests}{%
+\subsection{Tests}\label{tests}}
+
+Tests are essential to discover incorrect functionality, investigate code scalability and reveal poor design choices.
+There are a variety of useful tests, such as unit tests of sub components or tests of software functionality at a larger scale (e.g., see the \texttt{testthat} package in R, Wickham, 2011).
+It is possible to quantify aspects of software testing, for example, by assessing code coverage, defined as the percentage of code lines executed during testing.
+However, we believe that we should give points for software that promises that major functionality is covered by tests.
+Those tests should be automated or at least open-source and reproducible.
+
+\hypertarget{documentation}{%
+\subsection{Documentation}\label{documentation}}
+
+Just like for tests, there are different types of documentation.
+For example, tutorials showcase software usage with examples, and there is application programming interface (API) documentation for individual functions and classes to enable reusing functions in other software packages.
+We propose to identify relevant categories of documentation for research software, e.g., installation instructions, tutorials, API, and community guidelines (also see \url{https://joss.readthedocs.io/en/latest/review_checklist.html}), and score the presence of each of them separately.
+
+\hypertarget{maintenance}{%
+\subsection{Maintenance}\label{maintenance}}
+
+Maintaining a software package is often more work than writing it.
+This should be reflected in the assessment procedure.
+We propose to score two aspects of maintenance separately, maintaining the code base (such as active bug fixing and documenting changes in logs) and maintaining the community (such as providing the possibility to report bugs, feature requests, or support requests via tickets or mailing lists).
+
+\hypertarget{measuring-impact}{%
+\section{Measuring Impact}\label{measuring-impact}}
+
+Total citation metrics, number of users, downloads per month, GitHub stars and similar may provide a coarse measure for the impact of a software package, even though it is important to note the shortcomings we described above.
+
+We believe that the suggested merit statement is most useful to assess impact of research software and that this should be the primary statement for committee members to evaluate if they are less concerned with the technical aspects of research software development.
+In our view, researchers should be requested to indicate at least one (and up to three) research projects that directly benefited from their software contributions.
+In case of recently published research software, the merit statement can be used alternatively to describe expected benefits to the field or potential use-cases of the software.
+We believe this to be a fair assessment of the actual impact the specific contribution of the individual researcher had.
+
+\hypertarget{summary}{%
+\section{Summary}\label{summary}}
+
+In sum, we are thankful to Gärtner et al. (2022) for highlighting the importance of research software contributions as scientifically valuable products.
+We believe the current proposal should aim to better reflect the distinction between rigor and impact for software, similar to the guidelines proposed to evaluate journal articles.
+To this end, we suggest a more fine-grained assessment of rigor, and put emphasis on the merit statement, in which software authors should argue in how far their project impacted other scientific endeavors.
+Last, we hope to arrive at an evaluation scheme that incentivizes the development of scientific open-source software.
+Note that the requirements of a given academic position should guide the weighting of research software when evaluating and selecting candidates.
+In some cases, research software development may be central to a position and, therefore, a requirement (such as when hiring professors of statistics or research methods), but in other cases, we hope that research software development activities at least are considered as research output comparable to published papers.
+
+\newpage
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-R-papaja}{}}%
+Aust, F., \& Barth, M. (2022). \emph{{papaja}: {Prepare} reproducible {APA} journal articles with {R Markdown}}. Retrieved from \url{https://github.com/crsh/papaja}
+
+\leavevmode\vadjust pre{\hypertarget{ref-bates2014fitting}{}}%
+Bates, D., Mächler, M., Bolker, B., \& Walker, S. (2014). Fitting linear mixed-effects models using lme4. \emph{arXiv Preprint arXiv:1406.5823}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-baxter2012research}{}}%
+Baxter, R., Hong, N. C., Gorissen, D., Hetherington, J., \& Todorov, I. (2012). The research software engineer. \emph{Digital Research Conference, Oxford}, 1--3.
+
+\leavevmode\vadjust pre{\hypertarget{ref-pdc-paper}{}}%
+Brandmaier, A. M. (2015). {pdc}: An {R} package for complexity-based clustering of time series. \emph{Journal of Statistical Software}, \emph{67}(5), 1--23. \url{https://doi.org/10.18637/jss.v067.i05}
+
+\leavevmode\vadjust pre{\hypertarget{ref-manifesto}{}}%
+Climate Code Foundation. (2011). \emph{Science code manifesto}. Retrieved from \url{http://web.archive.org/web/20201112032938/http://sciencecodemanifesto.org/}
+
+\leavevmode\vadjust pre{\hypertarget{ref-gartner2022responsible}{}}%
+Gärtner, A., Leising, D., \& Schönbrodt, F. (2022). \emph{Responsible research assessment {II}: A specific proposal for hiring and promotion in psychology}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-TSclust}{}}%
+Montero, P., \& Vilar, J. A. (2014). {TSclust}: An {R} package for time series clustering. \emph{Journal of Statistical Software}, \emph{62}(1), 1--43. Retrieved from \url{http://www.jstatsoft.org/v62/i01/}
+
+\leavevmode\vadjust pre{\hypertarget{ref-peikert2021reproducible}{}}%
+Peikert, A., Van Lissa, C. J., \& Brandmaier, A. M. (2021). Reproducible research in r: A tutorial on how to do the same thing more than once. \emph{Psych}, \emph{3}(4), 836--867.
+
+\leavevmode\vadjust pre{\hypertarget{ref-schonbrodt2022responsible}{}}%
+Schönbrodt, F., Gärtner, A., Frank, M., Gollwitzer, M., Ihle, M., Mischkowski, D., et al.others. (2022). \emph{Responsible research assessment {I}: Implementing {DORA} for hiring and promotion in psychology}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-wickham2011}{}}%
+Wickham, H. (2011). Testthat: Get started with testing. \emph{The R Journal}, \emph{3}, 5--10. Retrieved from \url{https://journal.r-project.org/archive/2011-1/RJournal_2011-1_Wickham.pdf}
+
+\end{CSLReferences}
+
+
+\end{document}
