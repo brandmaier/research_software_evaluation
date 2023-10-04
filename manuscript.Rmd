@@ -6,7 +6,7 @@ shorttitle        : "Assessing research software"
 author: 
   - name          : "Andreas M. Brandmaier"
     affiliation   : "1,2,3"
-    corresponding : yes    # Define only one corresponding author
+    corresponding : no    # Define only one corresponding author
     address       : "Rüdesheimer Str. 50, 14197 Berlin"
     email         : "andreas.brandmaier@medicalschool-berlin.de"
   - name          : "Maximilian Ernst"
@@ -301,8 +301,8 @@ In some cases, research software development may be central to a position and, t
 
 ## Author Contact
 
-Put the contact information and any acknowledgements here. ORCID to all author if available. Corresponding author mandatory.
-These headings after the article but before the references are required. Feel free to add other headings (e.g., acknowledgments) if you need to.
+Correspondence concerning this article should be addressed to Andreas M. Brandmaier, Rüdesheimer Str. 50, 14197 Berlin.
+E-mail: \href{mailto:andreas.brandmaier@medicalschool-berlin.de}{\nolinkurl{andreas.brandmaier@medicalschool-berlin.de}}
 
 ## Conflict of Interest and Funding
 
