@@ -46,7 +46,7 @@ affiliation:
   - id            : "3"
     institution   : "Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany"
   - id            : "4"
-    institution   : "Department of Psychology, Humboldt-Universität zu Berlin, Berlin, Germany"
+    institution   : "Max Planck School of Cognition, Leipzig, Germany"
     
 correspondence: |
   brandmaier@mpib-berlin.mpg.de
