@@ -312,9 +312,12 @@ There was no specific funding for this research.
 ## Author Contributions
 
 The authors made the following contributions.
-Andreas M. Brandmaier: Conceptualization, Writing - Original Draft Preparation, Writing - Review & Editing, Supervision;
-Maximilian Ernst: Conceptualization, Writing - Original Draft Preparation, Writing - Review & Editing;
-Aaron Peikert: Conceptualization, Writing - Original Draft Preparation, Writing - Review & Editing.
+Andreas M. Brandmaier
+: Conceptualization, Writing - Original Draft Preparation, Writing - Review & Editing, Supervision;
+Maximilian Ernst
+: Conceptualization, Writing - Original Draft Preparation, Writing - Review & Editing;
+Aaron Peikert
+: Conceptualization, Writing - Original Draft Preparation, Writing - Review & Editing.
 
 ## Open Science Practices
 
