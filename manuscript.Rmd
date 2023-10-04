@@ -66,12 +66,115 @@ mask              : no
 figurelist        : no
 tablelist         : no
 footnotelist      : no
+csquotes          : true
+babel-lang        : american
+classoption       : "jou,a4paper"
+header-includes:
+  - |
+    % Change font for whole document
+    \renewcommand{\familydefault}{\rmdefault}
+    \renewcommand*\rmdefault{bch}
+    
+    \usepackage[english,all,portrait,draft]{draftcopy}
+    \usepackage[blocks]{authblk}
+    
+    % Add watermark for preprints at the top of each page
+    % Comment out to remove preprint watermark
+    %\usepackage{draftwatermark}
+    %\SetWatermarkText{PREPRINT}
+    %\SetWatermarkScale{0.3}
+    %\SetWatermarkAngle{0}
+    %\SetWatermarkVerCenter{25pt}
+    %\SetWatermarkColor[rgb]{0.85,0.85,0.95}
+    
+    % Add header with journal information
+    \usepackage{fancyhdr}
+    \renewcommand{\headrulewidth}{0pt} 	% remove vertical line
+    \setlength{\headheight}{54pt}  % increase vertical space for header
+    \fancypagestyle{firststyle}
+    {
+       \fancyhf{} % clear all header and footer fields
+       
+    		\fancyhead[L]{\scriptsize  
+    		\textit{Meta-Psychology}, 2023, vol 7, MP.201X.xxx\\\href{https://doi.org/10.15626/MP.}{https://doi.org/10.15626/MP.}\\Article type: \\Published under the CC-BY4.0 license \\
+    		\smallskip
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%% Badges %%%%%%%%%%%%%%%%%%%%%
+    		\includegraphics[scale=0.2]{badges/opendata.png}
+    		\includegraphics[scale=0.2]{badges/openmaterial.png}
+    		\includegraphics[scale=0.2]{badges/preregestered.png}
+    		\includegraphics[scale=0.2]{badges/preregesteredplus.png}
+    		}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+        \fancyhead[C]{\scriptsize 
+            Open data: Yes\\
+            Open materials: Yes \\
+            Open and reproducible analysis:\\
+            Open reviews and editorial process: Yes\\
+            Preregistration: 
+            \vspace{0.5ex}
+    \\
+    		\smallskip}
+        \fancyhead[R]{\scriptsize   Edited by: \\
+            Reviewed by: \\
+            Analysis reproduced by: \\
+            All supplementary files can be accessed at OSF: \\
+            \href{https://doi.org/10.17605/OSF.IO/}{https://doi.org/10.17605/OSF.IO/}
+            \vspace{0.5ex}
+    \\
+    		\smallskip}
+    }
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \usepackage[]{graphicx}
+    \usepackage[]{color}
+    \usepackage{tikz}  % for watermark on first page
+    
+    \usepackage{alltt}
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    
+    \usepackage{amsmath}  	% for advanced math displays
+    \usepackage{booktabs}		% booktables
+    
+    % With that package, tables are single spaced
+    \usepackage{setspace}
+    
+    \usepackage{listings}  % for inline code blocks
+    \lstset{
+    	basicstyle=\footnotesize\ttfamily, % the size of the fonts that are used for the code
+    	breaklines=true,  % sets automatic line breaking
+    	breakatwhitespace=true % sets if automatic breaks should only happen at whitespace
+    }
+    
+    \usepackage{url}	% links to headings
+    \usepackage{placeins} 	% flushes Figures before the next section starts
+    % use command \FloatBarrier
+    
+    %% APA-style citations
+    \usepackage{csquotes}
+    \usepackage[backend=biber,style=apa,hyperref=true,giveninits,uniquename=init]{biblatex}
+    \DeclareLanguageMapping{american}{american-apa}
+    
+    % TODO: Users must add their .bib file here
+    \addbibresource{references.bib}
+    
+    % remove unwanted fields from .bib-file
+    \AtEveryBibitem{	
+      \clearfield{day}
+      \clearfield{month}
+      \clearfield{labelday}
+      \clearfield{labelmonth}
+    }
+    %\usepackage{multicol} %unneeded, apa6 already split cols
+    \raggedbottom
+    
+    \usepackage{hyperref} % should be loaded last as it redefines many Latex commands
+    \hypersetup{colorlinks, urlcolor=blue, citecolor=blue}
 
-classoption       : "man"
-output            : papaja::apa6_pdf
+documentclass     : "apa7"
+output            :
+  papaja::apa6_pdf:
+    citation_package: biblatex
 equal_contrib: yes
-header-includes: |
-  \usepackage{hyperref}
 repro:
   packages:
     - papaja
@@ -90,6 +193,9 @@ r_refs("r-references.bib")
 set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
+
+\thispagestyle{firststyle}
+ 
 
 # Introduction
 
