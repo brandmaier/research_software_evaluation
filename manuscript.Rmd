@@ -306,7 +306,8 @@ These headings after the article but before the references are required. Feel fr
 
 ## Conflict of Interest and Funding
 
-Add a statement about conflict of interest. If you have no conflict of interest to declare, please state that. Add a statement about how the research was funded. If there was no specific funding please state that.
+We have no conflict of interest to declare.
+There was no specific funding for this research.
 
 ## Author Contributions
 
