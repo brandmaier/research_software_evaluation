@@ -24,7 +24,7 @@ affiliation:
   - id            : "4"
     institution   : "Max Planck School of Cognition, Leipzig, Germany"
   - id            : "5"
-institution   : "Department of Imaging Neuroscience, University College London, London, UK"
+    institution   : "Department of Imaging Neuroscience, University College London, London, UK"
 
     
 correspondence: |
