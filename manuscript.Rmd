@@ -9,24 +9,11 @@ author:
     corresponding : yes    # Define only one corresponding author
     address       : "Rüdesheimer Str. 50, 14197 Berlin"
     email         : "andreas.brandmaier@medicalschool-berlin.de"
-    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
-      - "Conceptualization"
-      - "Writing - Original Draft Preparation"
-      - "Writing - Review & Editing"
-      - "Supervision"
   - name          : "Maximilian Ernst"
     affiliation   : "2,4"
-    role:
-      - "Conceptualization"
-      - "Writing - Original Draft Preparation"
-      - "Writing - Review & Editing"
   - name          : "Aaron Peikert"
     affiliation   : "2,3,4"
-    role:
-      - "Conceptualization"
-      - "Writing - Original Draft Preparation"
-      - "Writing - Review & Editing"
-  
+
 affiliation:
   - id            : "1"
     institution   : "Department of Psychology, MSB Medical School Berlin, Berlin, Germany"
@@ -323,9 +310,10 @@ Add a statement about conflict of interest. If you have no conflict of interest 
 
 ## Author Contributions
 
-Explain the contribution of each authors. If you are the single author, please spell it out anyway for future proper credit of your contributions and meta-science studies. 
-The Contributor Roles Taxonomy can be helpful. https://www.casrai.org/credit.html 
-Please explain how the author names order connects to the contribution (e.g. alphabetical, ranked, or random order).
+The authors made the following contributions.
+Andreas M. Brandmaier: Conceptualization, Writing - Original Draft Preparation, Writing - Review & Editing, Supervision;
+Maximilian Ernst: Conceptualization, Writing - Original Draft Preparation, Writing - Review & Editing;
+Aaron Peikert: Conceptualization, Writing - Original Draft Preparation, Writing - Review & Editing.
 
 ## Open Science Practices
 
