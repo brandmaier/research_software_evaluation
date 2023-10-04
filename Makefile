@@ -13,13 +13,13 @@ RUN2 = $(QRUN2)
 ### Rmd's ###
 include .repro/Makefile_Rmds
 
-manuscript.pdf: manuscript.tex
+manuscript.pdf: manuscript.tex 
 
-publish/: manuscript.pdf
+publish/: manuscript.pdf manuscript.tex
 
 include .repro/Makefile_publish
 
-publish/PR%/: manuscript.pdf
+publish/PR%/: manuscript.pdf manuscript.tex
 	mkdir -p $@
 	cp -r $^ $@
 
