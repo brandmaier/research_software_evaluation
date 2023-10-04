@@ -26,17 +26,6 @@ author:
       - "Conceptualization"
       - "Writing - Original Draft Preparation"
       - "Writing - Review & Editing"
-
-note: |
-  A commentary on:
-  Gärtner, A., Leising, D., & Schönbrodt, F. D. (2022, November 25). Responsible Research Assessment II: A specific proposal for hiring and promotion in psychology. https://doi.org/10.31234/osf.io/5yexm
-  
-  
-  Submitted to Meta-Psychology. 
-  
-  Participate in open peer review by commenting through hypothes.is directly on this preprint. The full editorial process of all articles under review at Meta-Psychology can be found following this link: https://tinyurl.com/mp-submissions. You will find this preprint by searching for the first author’s name.
-  
-    
   
 affiliation:
   - id            : "1"
@@ -66,12 +55,115 @@ mask              : no
 figurelist        : no
 tablelist         : no
 footnotelist      : no
+csquotes          : true
+babel-lang        : american
+classoption       : "jou,a4paper"
+header-includes:
+  - |
+    % Change font for whole document
+    \renewcommand{\familydefault}{\rmdefault}
+    \renewcommand*\rmdefault{bch}
+    
+    \usepackage[english,all,portrait,draft]{draftcopy}
+    \usepackage[blocks]{authblk}
+    
+    % Add watermark for preprints at the top of each page
+    % Comment out to remove preprint watermark
+    %\usepackage{draftwatermark}
+    %\SetWatermarkText{PREPRINT}
+    %\SetWatermarkScale{0.3}
+    %\SetWatermarkAngle{0}
+    %\SetWatermarkVerCenter{25pt}
+    %\SetWatermarkColor[rgb]{0.85,0.85,0.95}
+    
+    % Add header with journal information
+    \usepackage{fancyhdr}
+    \renewcommand{\headrulewidth}{0pt} 	% remove vertical line
+    \setlength{\headheight}{54pt}  % increase vertical space for header
+    \fancypagestyle{firststyle}
+    {
+       \fancyhf{} % clear all header and footer fields
+       
+    		\fancyhead[L]{\scriptsize  
+    		\textit{Meta-Psychology}, 2023, vol 7, MP.201X.xxx\\\href{https://doi.org/10.15626/MP.}{https://doi.org/10.15626/MP.}\\Article type: \\Published under the CC-BY4.0 license \\
+    		\smallskip
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%% Badges %%%%%%%%%%%%%%%%%%%%%
+    		\includegraphics[scale=0.2]{badges/opendata.png}
+    		\includegraphics[scale=0.2]{badges/openmaterial.png}
+    		\includegraphics[scale=0.2]{badges/preregestered.png}
+    		\includegraphics[scale=0.2]{badges/preregesteredplus.png}
+    		}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+        \fancyhead[C]{\scriptsize 
+            Open data: Yes\\
+            Open materials: Yes \\
+            Open and reproducible analysis:\\
+            Open reviews and editorial process: Yes\\
+            Preregistration: 
+            \vspace{0.5ex}
+    \\
+    		\smallskip}
+        \fancyhead[R]{\scriptsize   Edited by: \\
+            Reviewed by: \\
+            Analysis reproduced by: \\
+            All supplementary files can be accessed at OSF: \\
+            \href{https://doi.org/10.17605/OSF.IO/}{https://doi.org/10.17605/OSF.IO/}
+            \vspace{0.5ex}
+    \\
+    		\smallskip}
+    }
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \usepackage[]{graphicx}
+    \usepackage[]{color}
+    \usepackage{tikz}  % for watermark on first page
+    
+    \usepackage{alltt}
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    
+    \usepackage{amsmath}  	% for advanced math displays
+    \usepackage{booktabs}		% booktables
+    
+    % With that package, tables are single spaced
+    \usepackage{setspace}
+    
+    \usepackage{listings}  % for inline code blocks
+    \lstset{
+    	basicstyle=\footnotesize\ttfamily, % the size of the fonts that are used for the code
+    	breaklines=true,  % sets automatic line breaking
+    	breakatwhitespace=true % sets if automatic breaks should only happen at whitespace
+    }
+    
+    \usepackage{url}	% links to headings
+    \usepackage{placeins} 	% flushes Figures before the next section starts
+    % use command \FloatBarrier
+    
+    %% APA-style citations
+    \usepackage{csquotes}
+    \usepackage[backend=biber,style=apa,hyperref=true,giveninits,uniquename=init]{biblatex}
+    \DeclareLanguageMapping{american}{american-apa}
+    
+    % TODO: Users must add their .bib file here
+    \addbibresource{references.bib}
+    
+    % remove unwanted fields from .bib-file
+    \AtEveryBibitem{	
+      \clearfield{day}
+      \clearfield{month}
+      \clearfield{labelday}
+      \clearfield{labelmonth}
+    }
+    %\usepackage{multicol} %unneeded, apa6 already split cols
+    \raggedbottom
+    
+    \usepackage{hyperref} % should be loaded last as it redefines many Latex commands
+    \hypersetup{colorlinks, urlcolor=blue, citecolor=blue}
 
-classoption       : "man"
-output            : papaja::apa6_pdf
+documentclass     : "apa7"
+output            :
+  papaja::apa6_pdf:
+    citation_package: biblatex
 equal_contrib: yes
-header-includes: |
-  \usepackage{hyperref}
 repro:
   packages:
     - papaja
@@ -90,6 +182,9 @@ r_refs("r-references.bib")
 set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
+
+\thispagestyle{firststyle}
+ 
 
 # Introduction
 
@@ -214,9 +309,27 @@ Last, we hope to arrive at an evaluation scheme that incentivizes the developmen
 Note that the requirements of a given academic position should guide the weighting of research software when evaluating and selecting candidates.
 In some cases, research software development may be central to a position and, therefore, a requirement (such as when hiring professors of statistics or research methods), but in other cases, we hope that research software development activities at least are considered as research output comparable to published papers.
 
-\newpage
+## Author Contact
 
-# References
+Put the contact information and any acknowledgements here. ORCID to all author if available. Corresponding author mandatory.
+These headings after the article but before the references are required. Feel free to add other headings (e.g., acknowledgments) if you need to.
 
-::: {#refs custom-style="Bibliography"}
-:::
+## Conflict of Interest and Funding
+
+Add a statement about conflict of interest. If you have no conflict of interest to declare, please state that. Add a statement about how the research was funded. If there was no specific funding please state that.
+
+## Author Contributions
+
+Explain the contribution of each authors. If you are the single author, please spell it out anyway for future proper credit of your contributions and meta-science studies. 
+The Contributor Roles Taxonomy can be helpful. https://www.casrai.org/credit.html 
+Please explain how the author names order connects to the contribution (e.g. alphabetical, ranked, or random order).
+
+## Open Science Practices
+
+ \includegraphics[scale=0.50]{badges/opendata.png}
+ \includegraphics[scale=0.50]{badges/openmaterial.png}
+ \includegraphics[scale=0.50]{badges/preregestered.png}
+ \includegraphics[scale=0.50]{badges/preregesteredplus.png}
+ 
+\textbf{NOTE. This will be filled out by the reproducibility team.}
+This article earned the Preregistration, Open Data and the Open Materials badge for preregistering the hypothesis and analysis before data collection, and for making the data and materials openly available. It has been verified that the analysis reproduced the results presented in the article. The entire editorial process, including the open reviews, are published in the online supplement.
