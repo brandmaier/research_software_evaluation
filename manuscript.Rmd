@@ -202,9 +202,9 @@ In fact, citations suffer from additional shortcomings when used to evaluate the
 For example, citing data analysis packages is much more commonly accepted than citing supporting packages [such as papaja, @R-papaja, used to render this article].
 Further, functionality of successful, modular scientific software is ideally reused in other software packages to avoid code duplication and enable faster development of new software.
 While we highly encourage reuse from both a software engineering perspective and for scientific progress, it challenges the validity of citation-based metrics for impact.
-For example, consider the `NLopt` optimization suite, which counts 1,711 citations on Google scholar at the time of writing.
+For example, consider the `NLopt` optimization suite, which counts 1,711 citations on Google Scholar at the time of writing.
 `NLopt` is a backbone for many scientific packages both because it implements various optimization algorithms but also because it is open-source and can inspire re-implementations of these algorithms.
-One such example is the famous `lme4` package [@bates2014fitting] for generalized linear mixed-effects models, which is partly based on `NLopt`.
+One such example is the well-known `lme4` package [@bates2014fitting] for generalized linear mixed-effects models, which is partly based on `NLopt`.
 `lme4` has more than 58,000 citations on Google scholar, yet it is unlikely that researchers will cite the underlying optimization algorithm.
 For another example, the `pdc` package [@pdc-paper] offers functions to cluster time series based on one specific algorithm.
 The `TSclust` package [@TSclust] is a wrapper package, which imports and makes accessible functionality from the `pdc` package as well as various other clustering approaches, which is very useful from a users' perspective; however, we noticed that researchers now cite `TSclust` instead of `pdc`.
@@ -295,7 +295,7 @@ We believe this to be a fair assessment of the actual impact the specific contri
 In sum, we are thankful to @gartner2022responsible for highlighting the importance of research software contributions as scientifically valuable products.
 We believe the current proposal should aim to better reflect the distinction between rigor and impact for software, similar to the guidelines proposed to evaluate journal articles.
 To this end, we suggest a more fine-grained assessment of rigor, and put emphasis on the merit statement, in which software authors should argue in how far their project impacted other scientific endeavors.
-Last, we hope to arrive at an evaluation scheme that incentivizes the development of scientific open-source software.
+Last, we hope to arrive at an evaluation scheme that incentivizes the development of open-source research software.
 Note that the requirements of a given academic position should guide the weighting of research software when evaluating and selecting candidates.
 In some cases, research software development may be central to a position and, therefore, a requirement (such as when hiring professors of statistics or research methods), but in other cases, we hope that research software development activities at least are considered as research output comparable to published papers.
 
